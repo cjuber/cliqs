@@ -1,0 +1,214 @@
+.app{
+    background:$mainBack;
+}
+.authHeader {
+    width: 100%;
+    height: 10%;
+}
+
+.mobileBar{
+    display: none;
+
+}
+.authBox{
+    margin-left: 5vw;
+    width: 90vw;
+    height: 80vh;
+    margin-top: 50px;
+    box-shadow: 2px 5px 15px 2px;
+ 
+}
+.authLogo{
+    width: 33%;
+    height: 115px;
+    border-right: 1.5px solid #ccc; 
+    display: inherit;
+}
+.authInputC{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+.authHdrBtn{
+    display: inherit;
+    position: fixed;
+    right: 0;
+    width: 200px;
+    height: 10%;
+    border-left: 1.5px solid #ccc;  
+    border-top: none;
+    border-bottom:none;  
+    background: $headerColor;
+   
+}
+.authHdrBtn p {
+    font-size: 30px;
+    margin-top: 10px;
+}
+.pHdrBtn {
+    position: fixed;
+    right: 80px;
+    top: 28px;
+}
+
+.authBtn{
+    margin-top: 50px;
+    width: 250px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: $buttonColor;
+}
+.authBtn2{display: none;}
+.header{
+
+    height: 70px;
+    display: grid;
+    grid-template-columns: 33% 20% 20 20%;
+    grid-template-rows: auto;
+}
+
+.logoC{
+    display: inherit;
+}
+
+.findGroups{
+    display:inherit;
+}
+.addGroups{
+    display: inherit;
+}
+
+.headerName{
+    display: inherit;
+}
+
+.dash-posts{
+    
+    height: 100%;
+    margin-top:0;
+   display:flex;
+   flex-direction: row;
+   border-top:none;
+
+}
+.container{
+    display:flex;
+    flex-direction: row;
+    border-top:none;
+    background:$mainBack;
+}
+    
+.navCtnr{
+     
+     width: 20%;
+}.navCtnr2{
+     
+    width: 78%;
+}
+.navOne {
+    margin-left: 50%;
+    height:20vh;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    position: initial;
+    background: $secBack;
+    border-bottom:1px solid #ccc;
+   
+}
+.navMid{
+    margin-left: 15%;
+    height: 20vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom:1px solid #ccc ;
+}
+.navTwo {
+    margin-left: 12%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border-right: 1px solid #ccc ;
+    background: $secBack;
+}
+.dash{
+    width: 20%;
+    height:95vh;
+    border-right: .1px solid #ccc ;
+    border-top: none;
+    position: initial;
+}
+
+.postsCtnr{
+    
+    min-height: 40%;
+    margin-top: 20px;
+    width: 50%;
+    background: $secBack;
+    margin-left: 4%;
+    box-shadow: .5px .5px 5px 1px;
+    border-top: 10px solid #49D6EF;
+}
+.cardTitle{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    margin-left: 5%;
+    align-items: flex-end;
+
+}
+.cardTitle h1 {
+    font-size: 18px;
+    margin: 0 3px;
+}
+.cardTitle h2 {
+    font-size: 15px;
+    margin: 0 3px;
+}
+.cardTitle h3 {
+    font-size: 12px;
+    margin: 0 3px;
+    color: grey;
+}
+.cardTitle2{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    margin-left: 5%;
+    align-items: flex-end;
+}
+.cardTitle2 h2 {
+    font-size: 15px;
+    margin: 0 3px;
+}
+.cardTitle2 h3 {
+    font-size: 12px;
+    margin: 0 3px;
+    color: grey;
+}
+
+.pCard {
+    height: 20%;
+    width: 90%;
+    font-size: 18px;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.nPostTop{
+    display: flex;
+    margin-left: 25%;
+
+}
+.nPFlex{
+    display: flex;
+    margin-left: 15%;
+}
+.nPFlexMid{
+    display: flex;
+    flex-direction: column;
+}

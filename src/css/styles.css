@@ -1,0 +1,656 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+.app {
+  background: #CECECE;
+}
+
+.authCtnr {
+  background: #CECECE;
+  height: 100vh;
+}
+
+.authHeader {
+  width: 100%;
+  height: 80px;
+  background: #FB5153;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.authLogo {
+  display: none;
+}
+
+.authBox {
+  margin-left: 5vw;
+  width: 90vw;
+  height: 80vh;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+}
+
+.authInputC {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.authInput {
+  width: 270px;
+  height: 50px;
+  padding: 12px 20px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 18px;
+  margin: 10px 10px;
+}
+
+.authBtnC {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.authHdrBtn {
+  display: none;
+}
+
+.authBtn {
+  margin-top: 20px;
+  width: 250px;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #49D6EF;
+}
+
+.authBtn2 {
+  margin-top: 20px;
+  width: 250px;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #49D6EF;
+}
+
+.mobileBar {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 50px;
+  background: white;
+  position: fixed;
+  top: 65px;
+}
+
+.header {
+  width: 100%;
+  height: 90px;
+  background: #FB5153;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 15% 15% 30% 20%;
+      grid-template-columns: 20% 15% 15% 30% 20%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+.logoC {
+  border-right: 1.5px solid #ccc;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 1;
+  display: none;
+}
+
+.logo {
+  width: 70px;
+}
+
+.findGroups {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 2;
+  width: 80%;
+  display: none;
+  border-right: 1.5px solid #ccc;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.pGroups {
+  font-size: 18px;
+  margin-top: 25px;
+  margin-left: 28px;
+}
+
+.addGroups {
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  grid-column-end: 3;
+  width: 60%;
+  display: none;
+}
+
+.paGroups {
+  font-size: 18px;
+  margin-top: 25px;
+}
+
+.headerName {
+  width: 100%;
+  height: 100%;
+  border-left: 1.5px solid #ccc;
+  -ms-grid-column: 5;
+      grid-column-start: 5;
+  grid-column-end: 5;
+  display: none;
+}
+
+.name {
+  font-size: 25px;
+  margin-left: 10%;
+  margin-top: 20px;
+}
+
+.hdrMenu {
+  position: fixed;
+  top: 70px;
+  background: #FB5153;
+  width: 20%;
+  border-top: 1.5px solid #ccc;
+}
+
+.hdrMenu2 {
+  display: none;
+}
+
+.hdrUL {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hdrUL li {
+  list-style: none;
+  margin: 10px;
+  padding-bottom: 10px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.navOne {
+  width: 150px;
+  height: 15vh;
+  border-right: .5px solid black;
+  display: none;
+}
+
+.navTwo {
+  display: none;
+}
+
+.dash {
+  width: 100%;
+  height: 12vh;
+  border-top: .5px solid black;
+  position: fixed;
+  bottom: 0;
+  background: white;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-top: none;
+  background: #CECECE;
+}
+
+.postsCtnr {
+  margin-top: 20px;
+  width: 80%;
+  background: white;
+  margin-left: 10%;
+  -webkit-box-shadow: .5px .5px 5px 1px;
+          box-shadow: .5px .5px 5px 1px;
+  min-height: 275px;
+  border-top: 5px solid #49D6EF;
+}
+
+.newPosts {
+  background: white;
+  width: 80%;
+  height: 75vh;
+  margin-left: 10%;
+}
+
+.nPostTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 35%;
+}
+
+.nPFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 10%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nPFlexMid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (min-width: 760px) {
+  .app {
+    background: #CECECE;
+  }
+  .authHeader {
+    width: 100%;
+    height: 10%;
+  }
+  .mobileBar {
+    display: none;
+  }
+  .authBox {
+    margin-left: 5vw;
+    width: 90vw;
+    height: 80vh;
+    margin-top: 50px;
+    -webkit-box-shadow: 2px 5px 15px 2px;
+            box-shadow: 2px 5px 15px 2px;
+  }
+  .authLogo {
+    width: 33%;
+    height: 115px;
+    border-right: 1.5px solid #ccc;
+    display: inherit;
+  }
+  .authInputC {
+    margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .authHdrBtn {
+    display: inherit;
+    position: fixed;
+    right: 0;
+    width: 200px;
+    height: 10%;
+    border-left: 1.5px solid #ccc;
+    border-top: none;
+    border-bottom: none;
+    background: #FB5153;
+  }
+  .authHdrBtn p {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  .pHdrBtn {
+    position: fixed;
+    right: 80px;
+    top: 28px;
+  }
+  .authBtn {
+    margin-top: 50px;
+    width: 250px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #49D6EF;
+  }
+  .authBtn2 {
+    display: none;
+  }
+  .header {
+    height: 70px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 33% 20% 20 20%;
+        grid-template-columns: 33% 20% 20 20%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+  .logoC {
+    display: inherit;
+  }
+  .findGroups {
+    display: inherit;
+  }
+  .addGroups {
+    display: inherit;
+  }
+  .headerName {
+    display: inherit;
+  }
+  .dash-posts {
+    height: 100%;
+    margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-top: none;
+  }
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border-top: none;
+    background: #CECECE;
+  }
+  .navCtnr {
+    width: 20%;
+  }
+  .navCtnr2 {
+    width: 78%;
+  }
+  .navOne {
+    margin-left: 50%;
+    height: 20vh;
+    border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: initial;
+    background: white;
+    border-bottom: 1px solid #ccc;
+  }
+  .navMid {
+    margin-left: 15%;
+    height: 20vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-bottom: 1px solid #ccc;
+  }
+  .navTwo {
+    margin-left: 12%;
+    height: 50vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 20px;
+    border-right: 1px solid #ccc;
+    background: white;
+  }
+  .dash {
+    width: 20%;
+    height: 95vh;
+    border-right: .1px solid #ccc;
+    border-top: none;
+    position: initial;
+  }
+  .postsCtnr {
+    min-height: 40%;
+    margin-top: 20px;
+    width: 50%;
+    background: white;
+    margin-left: 4%;
+    -webkit-box-shadow: .5px .5px 5px 1px;
+            box-shadow: .5px .5px 5px 1px;
+    border-top: 10px solid #49D6EF;
+  }
+  .cardTitle {
+    height: 20%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 5%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .cardTitle h1 {
+    font-size: 18px;
+    margin: 0 3px;
+  }
+  .cardTitle h2 {
+    font-size: 15px;
+    margin: 0 3px;
+  }
+  .cardTitle h3 {
+    font-size: 12px;
+    margin: 0 3px;
+    color: grey;
+  }
+  .cardTitle2 {
+    height: 20%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 5%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .cardTitle2 h2 {
+    font-size: 15px;
+    margin: 0 3px;
+  }
+  .cardTitle2 h3 {
+    font-size: 12px;
+    margin: 0 3px;
+    color: grey;
+  }
+  .pCard {
+    height: 20%;
+    width: 90%;
+    font-size: 18px;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .nPostTop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 25%;
+  }
+  .nPFlex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 15%;
+  }
+  .nPFlexMid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
