@@ -4,8 +4,7 @@ import NavTwo from '../nav2/NavTwo'
 import {Link} from 'react-router-dom'
 import axios from 'axios';
 import{connect} from 'react-redux'
-
-
+ 
 class AddGroup extends Component {
 
     constructor(){
@@ -61,14 +60,14 @@ class AddGroup extends Component {
         })
     }
     render() {
-        console.log(this.props.id.id)
+        
         return (
             <div className='container'>
                 <div className='dash'>
             <NavOne/>
             <div className='navCtnr2'>
             <div className='navMid'>
-                <Link to='/group/:id/post'><h1>+ Post</h1></Link>
+            <Link to='/post'><h1>+ Post</h1></Link>
                 </div>
                 </div>
             <NavTwo/> 

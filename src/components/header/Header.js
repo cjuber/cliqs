@@ -25,6 +25,9 @@ class Header extends Component {
             this.props.history.push('/')
         })
         .catch(err => console.log(err))
+        this.setState({
+            display:false
+        })
     }
     render() {
         
