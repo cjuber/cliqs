@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 
 export default class Posts extends Component {
+    
     render() {
-        const{title,content,post_img,group_name,first_name,last_name}=this.props.list
+        const{title,content,post_img,group_name,first_name,last_name,id}=this.props.list
+        const pathname = `/post/${id}`
         return (
-            <div className='postsCtnr'>
+            <Link to={pathname}><div className='postsCtnr'>
               
                 <div className='cardTitle'>
+                    
                 <h1>{first_name} {last_name} </h1><h3>at</h3><h2>{group_name}</h2>
                 </div>
                 <div className='cardTitle2'>
@@ -23,7 +27,7 @@ export default class Posts extends Component {
                 </div>
                 
              
-            </div>
+            </div></Link>
             
         )
     }

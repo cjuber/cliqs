@@ -6,7 +6,7 @@ import NavTwo from '../nav2/NavTwo'
 import axios from 'axios';
 import { connect } from 'react-redux'
 
-class Dashboard extends Component {
+class MyPosts extends Component {
     constructor(){
         super()
         this.state={
@@ -19,9 +19,9 @@ class Dashboard extends Component {
 
     getPosts = ()=>{
         const{id}=this.props.id
-        axios.get(`http://localhost:8080/api/posts/${id}`)
+        axios.get(`http://localhost:8080/myposts/${id}`)
         .then(response => {
-           console.log(response.data)
+            console.log(response.data)
             this.setState({
                 list:response.data
             })
@@ -54,4 +54,4 @@ function mapStateToProps(state){
     return state
 }
 
-export default connect(mapStateToProps)(Dashboard)
+export default connect(mapStateToProps)(MyPosts)

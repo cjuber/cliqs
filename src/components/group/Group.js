@@ -5,6 +5,7 @@ import {Link} from 'react-router-dom'
 import { connect } from 'react-redux'
 import axios from 'axios'
 import {updateGroup} from '../../redux/reducer'
+import Posts from '../posts/Posts'
 
 class Group extends Component {
     constructor(){
@@ -21,6 +22,7 @@ class Group extends Component {
     componentDidMount(){
         this.getGroup()
         this.checkMember()
+        this.getPosts()
     }
     getGroup = () =>{
         const id= this.props.match.params.id
@@ -32,6 +34,18 @@ class Group extends Component {
              
          })
      }
+     
+        getPosts = ()=>{
+            const{id}=this.props.match.params
+            axios.get(`http://localhost:8080/api/group/posts/${id}`)
+            .then(response => {
+              
+                this.setState({
+                    list:response.data
+                })
+            })
+        } 
+     
 
     checkMember = () => {
         const id= this.props.id.id
@@ -79,6 +93,11 @@ class Group extends Component {
     render() {
         const id= this.props.match.params.id
         const pathname = `/post/${id}`
+        const mappedPosts = this.state.list.map((list,index) => {
+            return(
+            <Posts key={index} list={list}/>
+            )
+        })
         return (
             <div>
                 <div className='container'>
@@ -101,7 +120,10 @@ class Group extends Component {
                 :
                 <h2 onClick={this.join}>Join</h2>
             }
-           
+           <div>
+
+           </div>
+                {mappedPosts}
             </div>
             </div>
         )

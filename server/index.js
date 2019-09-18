@@ -50,10 +50,15 @@ app.get('/api/group/:group_id/member/:id', grpCtrl.checkMember)
 app.delete('/api/group/:group_id/member/:id', grpCtrl.leave)
 app.put('/api/group/:group_id/member/:id', grpCtrl.join)
 
+
 //Posts
 
 app.post('/api/group/:group_id/post/:id', postCtrl.addPost)
 app.get('/api/posts/:id', postCtrl.getPosts)
+app.get('/myposts/:id', postCtrl.getMyPosts)
+app.get('/api/post/:id',postCtrl.getPost)
+app.delete('/api/post/:id', postCtrl.deletePost)
+app.get('/api/group/posts/:id', postCtrl.getGroupPosts)
 
 app.listen(SERVER_PORT, () =>{
     console.log(chalk.yellow.bgBlue('Server Running'))

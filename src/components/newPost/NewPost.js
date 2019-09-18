@@ -60,13 +60,13 @@ class NewPost extends Component {
         })
     }
     post = () => {
-        const{title,postText,img}=this.state
+        const{title,postText,postImg}=this.state
         const {id} = this.props.id
         const group_id=this.props.group_id.id
         const body= {
             title,
             postText,
-            img
+            postImg
         }
         axios.post(`http://localhost:8080/api/group/${group_id}/post/${id}`, body)
         .then(response => {

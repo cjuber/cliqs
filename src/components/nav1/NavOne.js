@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 
 class NavOne extends Component {
     render() {
+        const id = this.props.id.id
+        const pathname = `/myposts/${id}`
         
         return (
             <div className='navCtnr'>
@@ -16,7 +18,7 @@ class NavOne extends Component {
                     (<div className='navOne'>
                     
                        <Link to='/dashboard'><h1>Home</h1></Link> 
-                       <Link to=''> <h1>My Posts</h1></Link>
+                       <Link to={pathname}> <h1>My Posts</h1></Link>
                     
                     </div>)
                 }

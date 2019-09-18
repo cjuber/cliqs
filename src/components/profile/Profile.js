@@ -18,6 +18,18 @@ class Profile extends Component {
             <NavTwo/> 
             </div>
             </div>
+            <div>
+            <img></img>
+            <h1>Name</h1>
+            <p>about me</p>
+            </div>
+            <div>
+                <h2>Location</h2>
+                <h3>city</h3>
+                <h3>state</h3>
+                <h3>country</h3>
+
+            </div>
             </div>
         )
     }
