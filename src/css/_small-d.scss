@@ -82,7 +82,7 @@
 .header{
 
     width: 100%;
-    height: 90px;
+    height: 80px;
     background: $headerColor;
     display: grid;
     grid-template-columns: 20% 15% 15% 30% 20%;
@@ -129,6 +129,16 @@
     margin-top: 25px;
     
 }
+.profiileImg{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    position: fixed;
+    right: 20px;
+    top:12px;
+    border-radius: 30px;
+    
+}
 
 .headerName{
     width: 100%;
@@ -146,15 +156,20 @@
 
 .hdrMenu{
     position: fixed;
-    top: 70px;
+    top: 80px;
+    right:0;
     background: $headerColor;
-    width:20%;
+    width:100px;
     
-    border-top: 1.5px solid #ccc;
+    // transition: 0.7s;
+    // border-top: 1px solid #ccc;
     
 }
 .hdrMenu2{
-    display: none;
+    position: fixed;
+    top: -250px;
+    
+    
 }
 .hdrUL{
     display: flex;
@@ -166,7 +181,7 @@
     list-style: none;
     margin: 10px;
     padding-bottom: 10px;
-    font-size: 25px;
+    font-size: 20px;
    
     
     text-align: center;

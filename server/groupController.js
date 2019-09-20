@@ -11,8 +11,9 @@ const addGroup = async (req,res) => {
     } = req.body
     const db = req.app.get('db')
     const createGroup = await db.add_group([img,groupName,isPrivate,searchable,description])    
-    group_id = createGroup[0].id
-    newMember = await db.new_member(id,group_id)
+    const group_id = createGroup[0].id
+    const newMember = await db.new_member(id,group_id)
+    const newChatroom = await db.create_chatroom(group_id,groupName)
     res.status(200).send('Group Created')
     
 }

@@ -83,7 +83,18 @@
 .headerName{
     display: inherit;
 }
-
+.hdrMenu{
+    position: fixed;
+    top: 70px;
+    background: $headerColor;
+    width:20%;
+    
+    border-top: 1.5px solid #ccc;
+    
+}
+.hdrMenu2{
+    display: none;
+}
 .dash-posts{
     
     height: 100%;

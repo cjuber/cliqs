@@ -6,6 +6,8 @@ const initialState = {
     city:'',
     state: '',
     country: '',
+    about:'',
+    user_img:'',
     group_id:'',
     group_name: '',
     description: '',
@@ -41,7 +43,9 @@ export default function reducer (state = initialState, action){
         last_name: action.payload,
         city:action.payload,
         state: action.payload,
-        country: action.payload})
+        country: action.payload,
+        about:action.payload
+        })
 
         case UPDATE_GROUP:
             return Object.assign({},state, {

@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import axios from 'axios'
 import {updateGroup} from '../../redux/reducer'
 import Posts from '../posts/Posts'
+import Chat from '../chat/Chat'
 
 class Group extends Component {
     constructor(){
@@ -121,7 +122,7 @@ class Group extends Component {
                 <h2 onClick={this.join}>Join</h2>
             }
            <div>
-
+            <Chat id={id}/>
            </div>
                 {mappedPosts}
             </div>

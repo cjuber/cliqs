@@ -10,6 +10,7 @@ import Dashboard from '../components/dashboard/Dashboard'
 import Post from '../components/post/Post'
 import MyPosts from '../components/myPosts/MyPosts'
 
+
 export default (
 <Switch>
     <Route exact path='/' component={Auth} />
@@ -22,6 +23,7 @@ export default (
     <Route path='/dashboard' component={Dashboard} />
     <Route path='/post/:id' component={Post} />
     <Route path='/myposts/:id' component={MyPosts} />
+    
 </Switch>
 
 )

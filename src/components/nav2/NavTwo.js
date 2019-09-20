@@ -35,7 +35,7 @@ class NavTwo extends Component {
     
     render() {
         const id = this.props.id.id
-        const pathname = `find_group/${id}`
+        const pathname = `/find_group/${id}`
         const mappedGroups = this.state.gList.map((list, index) => {
             return(
                 <NavGroups key={index} list={list}/>

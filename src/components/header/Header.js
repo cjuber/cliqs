@@ -31,6 +31,8 @@ class Header extends Component {
     }
     render() {
         
+        const {id} = this.props.id
+        const pathname = `/profile/${id}`
         return (
             <div>
 
@@ -49,13 +51,13 @@ class Header extends Component {
                     <div className='addGroups'>
                     <Link to='/add_group' className='link'><span><p className='paGroups'>+ Group</p></span> </Link>
                     </div>
+                    <span onClick={this.changeDisplay}>
+                    <div className='profiileImg'>
+                    
+                        <img src={this.props.user_img} width='50'></img>
                         
-                    <div className='headerName' >
-                        <span onClick={this.changeDisplay}>
-                        <div>
-                        <h1 className='name'>{this.props.first_name.first_name} {this.props.last_name.last_name}</h1>
-                        </div>
-                        </span>
+                        </div> 
+                        </span> 
                         <div className={
                             this.state.display ?
                             'hdrMenu'
@@ -63,13 +65,20 @@ class Header extends Component {
                             'hdrMenu2'
                         }>
                             <ul className='hdrUL'>
-                                <Link to='/profile/:id' className='link'><li>Profile</li></Link>
-                                <Link to='/profile/:id' className='link'><li>Settings</li></Link>
+                                <Link to={pathname} className='link' onClick={this.changeDisplay}><li>Profile</li></Link>
+                                <Link to={pathname}  className='link' onClick={this.changeDisplay}><li>Settings</li></Link>
                                 <li onClick={this.logout}>Logout</li>
 
                             </ul>
 
                         </div>
+                    <div className='headerName' >
+                        <span onClick={this.changeDisplay}>
+                        <div>
+                        <h1 className='name'>{this.props.first_name.first_name} {this.props.last_name.last_name}</h1>
+                        </div>
+                        </span>
+                        
                     </div>
                 </div>)
                 }

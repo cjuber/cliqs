@@ -47,7 +47,7 @@ class Post extends Component {
             <NavOne/>
             <div className='navCtnr2'>
             <div className='navMid'>
-                <Link to='/group/:id/post'><h1>+ Post</h1></Link>
+                <Link to='/post'><h1>+ Post</h1></Link>
                 </div>
                 </div>
             <NavTwo/> 
