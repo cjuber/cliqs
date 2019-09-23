@@ -1086,6 +1086,10 @@ input, select {
           justify-content: center;
 }
 
+.chatApp {
+  width: 100%;
+}
+
 @media only screen and (min-width: 760px) {
   .app {
     background: #CECECE;
@@ -1230,6 +1234,14 @@ input, select {
   .navCtnr2 {
     width: 78%;
   }
+  .dsktpNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .mblNav {
+    display: none;
+  }
   .navOne {
     width: 150px;
     height: 15vh;
@@ -1243,10 +1255,12 @@ input, select {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    position: initial;
     background: white;
     border-bottom: 1px solid #ccc;
     border-right: .5px solid black;
+  }
+  .navOne h1 {
+    border: none;
   }
   .navMid {
     margin-left: 15%;

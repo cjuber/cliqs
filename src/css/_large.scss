@@ -132,6 +132,13 @@
      
     width: 78%;
 }
+.dsktpNav{
+    display: flex;
+   
+}
+.mblNav{
+    display:none;
+}
 .navOne {
     width: 150px;
     height:15vh;
@@ -140,11 +147,13 @@
     border: none;
     display: flex;
     flex-direction: column;
-    position: initial;
+    
     background: $secBack;
     border-bottom:1px solid #ccc;
     border-right: .5px solid black;
-   
+   h1{
+       border: none;
+   }
 }
 .navMid{
     margin-left: 15%;
