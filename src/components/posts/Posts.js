@@ -7,7 +7,7 @@ export default class Posts extends Component {
         const{title,content,post_img,group_name,first_name,last_name,id}=this.props.list
         const pathname = `/post/${id}`
         return (
-            <Link to={pathname}><div className='postsCtnr'>
+            <Link to={pathname} className='link'><div className='postsCtnr'>
               
                 <div className='cardTitle'>
                     
@@ -19,9 +19,9 @@ export default class Posts extends Component {
                 <div className='pCard'>
                     <h4>{title}</h4>
                 <p>{content}
-                </p>
+                </p> 
                 </div>
-                <img src={post_img} alt='img or something goes here' width="150"></img>
+                <img src={post_img} alt=''></img>
                 <div>
                     {/* bottom bar goes here */}
                 </div>

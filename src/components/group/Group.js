@@ -100,7 +100,7 @@ class Group extends Component {
             )
         })
         return (
-            <div>
+            <div className='group'>
                 <div className='container'>
             <div className='dash'>
             <NavOne/>
@@ -111,9 +111,21 @@ class Group extends Component {
                 </div>
             <NavTwo/> 
             </div>
-            <img src={this.props.img.img} alt={this.props.group_name.group_name}  height="50"></img>
+            <div className='groupPage'>
+                <div className='groupInfo'>
+                <div className='groupInfoTop'>
+                
+                <div className='groupImage'>
+            <img src={this.props.img.img} alt=''  height="50"></img>
+            </div>
+            <div className='groupName'>
             <h1>{this.props.group_name.group_name}</h1>
+            </div>
+            <div className='groupDesc'>
             <p>{this.props.description.description}</p>
+            </div>
+            </div>
+            <div className='groupInfoLinks'>
            <Link to={pathname}><h2>+ Post</h2></Link> 
             {
                 this.state.member ?
@@ -121,10 +133,15 @@ class Group extends Component {
                 :
                 <h2 onClick={this.join}>Join</h2>
             }
-           <div>
+            </div>
+           <div className='chat'>
             <Chat id={id}/>
            </div>
+           </div>
+           <div className='groupPostsC'>
                 {mappedPosts}
+                </div>
+            </div>
             </div>
             </div>
         )

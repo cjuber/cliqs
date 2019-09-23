@@ -21,7 +21,7 @@ class Dashboard extends Component {
         const{id}=this.props.id
         axios.get(`http://localhost:8080/api/posts/${id}`)
         .then(response => {
-           console.log(response.data)
+           
             this.setState({
                 list:response.data
             })
@@ -38,14 +38,16 @@ class Dashboard extends Component {
             <div className='container'>
             <div className='dash'>
             <NavOne/>
-            <div className='navCtnr2'>
+            <div className='navCtnr2'> 
             <div className='navMid'>
-                <Link to='/post'><h1>+ Post</h1></Link>
+                <Link className='link' to='/post' className='link'><h1>+ Post</h1></Link>
                 </div>
                 </div>
             <NavTwo/> 
             </div>
+            <div className='postCtnr'> 
             {mappedPosts}
+            </div>
             </div>
         )
     }

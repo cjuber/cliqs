@@ -82,50 +82,49 @@ class NewPost extends Component {
             )
         })
         return (
-            <div >
+            <div className='nPostCntnr'>
                 <div className='container'>
             <div className='dash'>
             <NavOne/>
             <div className='navCtnr2'>
             <div className='navMid'>
-            <Link to='/post'><h1>+ Post</h1></Link>
+            <Link className='link' to='/post'><h1>+ Post</h1></Link>
                 </div>
                 </div>
             <NavTwo/> 
             </div>
             <div className = 'newPosts'>
+                <div className='newPosts2'>
                <div className='nPostTop'>
-                   <img src={this.state.img} alt = 'Profile art' width="50"></img>
+                   <div className='nPostImg'><img src={this.state.img} alt = '' width="50"></img></div>
                    <br/>
                    <h1>{this.state.group_name}</h1>
                    <br/>
                </div>
               
                <div className='nPFlex'>
-               <div>
-               <div className='selectGroup' >
-                   {/* <span className='selectGrp' ><p>Select Group</p></span> */}
-               </div>
-               <div>
+              
+               
+               <div >
                    <form>
                        
-                       <select value='0' onChange={this.choseGroup}>
+                       <select className='selectGroup' value='0' onChange={this.choseGroup}>
                         <option value='0'>Select Group</option>
                         {mappedGroups}
 
                        </select>
                    </form>
                    
-               </div>
+              
                </div>
                <div className='nPFlexMid'>
-                <input placeholder='Title'name='title' onChange={this.handleChange}></input>
-                <input placeholder='What would you like to say' name='postText' onChange={this.handleChange}></input>
-                <input placeholder='Image' name='postImg' onChange={this.handleChange}></input>
+                <input className='nPostInput' placeholder='Title'name='title' onChange={this.handleChange}></input>
+                <input className='nPostContent' placeholder='What would you like to say' name='postText' onChange={this.handleChange}></input>
+                <input className='nPostInput' placeholder='Image' name='postImg' onChange={this.handleChange}></input>
                </div>
                <div>
-               <button onClick={this.post}>Post</button>
-                   
+               <button className='postBtn' onClick={this.post}>Post</button>
+               </div>
                </div>
                </div>
                </div>

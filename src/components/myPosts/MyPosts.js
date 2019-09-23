@@ -40,12 +40,14 @@ class MyPosts extends Component {
             <NavOne/>
             <div className='navCtnr2'>
             <div className='navMid'>
-                <Link to='/post'><h1>+ Post</h1></Link>
+                <Link className='link' to='/post'><h1>+ Post</h1></Link>
                 </div>
                 </div>
             <NavTwo/> 
             </div>
+            <div className='postCtnr'>
             {mappedPosts}
+            </div>
             </div>
         )
     }

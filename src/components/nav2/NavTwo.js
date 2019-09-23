@@ -43,16 +43,19 @@ class NavTwo extends Component {
         })
         return (
                 
-              <div className='noDisplay'>  
+              <div className='navCtnr3'>  
             
                { this.props.location.pathname === '/' ?
                     (null)
                     :
                     (<div className='navTwo'>
-                    
-                        <Link to={pathname}><h1>Groups</h1></Link>
+                        <div className='dsktpNav'> 
+                        <Link className='link' to={pathname} className='link'><h1>Groups</h1></Link>
                         {mappedGroups}
-               
+                        </div>
+                        <div className='mblNav'>
+                        <Link className='link' to={pathname} className='link'><h1>Groups</h1></Link>
+                        </div>
                     </div>)
                 } 
                 

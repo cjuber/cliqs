@@ -22,7 +22,7 @@ class FindGroup extends Component {
       if(path === '/find_group'){
         this.getGroups()
       } else {this.getMyGroups()}
-        console.log(this.props)
+        
         
     }
 
@@ -59,12 +59,12 @@ class FindGroup extends Component {
             <NavOne/>
             <div className='navCtnr2'>
             <div className='navMid'>
-                <Link to='/post'><h1>+ Post</h1></Link>
+                <Link className='link' to='/post'><h1>+ Post</h1></Link>
                 </div>
                 </div>
             <NavTwo/> 
             </div>
-            <div>
+            <div className='mappedGroups'>
                 {mappedGroups} 
             </div>
             </div>

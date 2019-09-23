@@ -44,7 +44,8 @@ export default function reducer (state = initialState, action){
         city:action.payload,
         state: action.payload,
         country: action.payload,
-        about:action.payload
+        about:action.payload,
+        user_img:action.payload
         })
 
         case UPDATE_GROUP:

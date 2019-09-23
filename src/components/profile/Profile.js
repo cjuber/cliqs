@@ -16,7 +16,8 @@ constructor(){
         city:'',
         state: '',
         country: '',
-        about: ''
+        about: '',
+        user_img: ''
     }
 }
 componentDidMount(){
@@ -42,6 +43,19 @@ edit = () => {
         display:true
     })
 }
+cancel = () => {
+    this.setState({
+        display:false,
+        first_name:this.props.id.first_name,
+        last_name:this.props.id.last_name,
+        email:this.props.id.email,
+        city:this.props.id.city,
+        state: this.props.id.state,
+        country: this.props.id.country,
+        about:this.props.id.about,
+        user_img:this.props.id.user_img
+    })
+}
 submit = () => {
     const body = {
         first_name:this.state.first_name,
@@ -62,67 +76,92 @@ submit = () => {
 
     render() {
         
-        const {first_name, last_name,city,state,country,email,about} = this.props.id
+        const {first_name, last_name,city,state,country,email,about,user_img} = this.props.id
         return (
-            <div>
-                <div className='container'>
+    <div className='profilePage'>
+        <div className='container'>
             <div className='dash'>
             <NavOne/>
             <div className='navCtnr2'>
             <div className='navMid'>
-                <Link to='/group/:id/post'><h1>+ Post</h1></Link>
+                <Link to='/post'><h1>+ Post</h1></Link>
                 </div>
                 </div>
             <NavTwo/> 
             </div>
-            <div>
+            <div className='profileCtnr'>
            {   !this.state.display ?
-           <div>
-               <div>
-                <img src={this.state.user_img}></img>
+           <div className='profileCtnr2'>
+               <div className='profileTop'>
+                   <div className='profilePageImg'>
+                <img  src={user_img} alt=''></img>
+                </div>
+                <div className='profileTop2'>
                 <h1>Name:</h1>
                 <h1>{first_name} {last_name}</h1>
                 <h1>Email:</h1>
                 <h1>{email}</h1>
                 <h1>about me:</h1>
                 <p>{about}</p>
-    
                 </div>
-                <div>
+                </div>
+                <div className='profileBtm'>
+                    <div>
                     <h2>Location:</h2>
+                    </div>
+                    <div className='location'>
                     <h3>city:</h3>
                     <h3>{city}</h3>
+                    </div>
+                    <div className='location'>
                     <h3>state:</h3>
                     <h3>{state}</h3>
-                    <h3>country:</h3>
+                    </div>
+                    <div className='location'>
+                    <h3>country:</h3>                    
                     <h3>{country}</h3>
-                    <div><button onClick={this.edit}>Edit</button></div>
+                    </div>
+
+                    <div ><button className='profileBtn' onClick={this.edit}>Edit</button></div>
     
                 </div>
                 </div>
                :
-               <div>
-                   <div>
-                <img src={this.state.user_img}></img>
-                <input type='text' value={this.state.user_img} name='user_img' onChange={this.handleChange}></input>
-                <h1>Name:</h1>
-                <input type='text' value={this.state.first_name} name='first_name' onChange={this.handleChange}></input>
-                <input type='text' value={this.state.last_name} name='last_name' onChange={this.handleChange}></input>
-                <h1>Email:</h1>
-                <input type='text' value={this.state.email} name='email' onChange={this.handleChange}></input>
-                <h1>about me:</h1>
-                <input type='text' value={this.state.about} name='about' onChange={this.handleChange}></input>
-    
+               <div className='profileCtnr2'>
+                   <div className='profileTop'>
+                       <div className='profilePageImg'>
+                <img src={this.state.user_img} alt='' ></img>
+                <input className='profileInput' type='url' value={this.state.user_img} name='user_img' onChange={this.handleChange}></input>
                 </div>
-                <div>
+                <div className='profileTop2'>
+                
+                <h1>Name:</h1>
+                <input className='profileInput'  type='text' value={this.state.first_name} name='first_name' onChange={this.handleChange}></input>
+                <input className='profileInput'  type='text' value={this.state.last_name} name='last_name' onChange={this.handleChange}></input>
+                <h1>Email:</h1>
+                <input className='profileInput'  type='text' value={this.state.email} name='email' onChange={this.handleChange}></input>
+                <h1>about me:</h1>
+                <input className='profileInput'  type='text' value={this.state.about} name='about' onChange={this.handleChange}></input>
+                </div>
+                </div>
+                <div className='profileBtm'>
+                    <div>
                     <h2>Location:</h2>
+                    </div>
+                    <div className='location'>
                     <h3>city:</h3>
-                    <input type='text' value={this.state.city} name='city' onChange={this.handleChange}></input>
+                    <input className='profileInput'  type='text' value={this.state.city} name='city' onChange={this.handleChange}></input>
+                    </div>
+                    <div className='location'>                    
                     <h3>state:</h3>
-                    <input type='text' value={this.state.state} name='state' onChange={this.handleChange}></input>
+                    <input className='profileInput'  type='text' value={this.state.state} name='state' onChange={this.handleChange}></input>
+                    </div>
+                    <div className='location'>                    
                     <h3>country:</h3>
-                    <input type='text' value={this.state.country} name='country' onChange={this.handleChange}></input>
-                    <div><button onClick={this.submit}>Submit</button></div>
+                    <input className='profileInput'  type='text' value={this.state.country} name='country' onChange={this.handleChange}></input>
+                    </div>
+                    <div ><button className='profileBtn' onClick={this.submit}>Submit</button></div>
+                    <div ><button className='profileBtn' onClick={this.cancel}>Cancel</button></div>
     
                 </div>
              </div>   

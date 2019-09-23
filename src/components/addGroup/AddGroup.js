@@ -62,38 +62,43 @@ class AddGroup extends Component {
     render() {
         
         return (
+            <div className='addGroup'>
             <div className='container'>
                 <div className='dash'>
             <NavOne/>
             <div className='navCtnr2'>
             <div className='navMid'>
-            <Link to='/post'><h1>+ Post</h1></Link>
+            <Link className='link' to='/post'><h1>+ Post</h1></Link>
                 </div>
                 </div>
             <NavTwo/> 
             </div>
-            <div className = 'newPosts'>
-                <div className='nPostTop'>
-                   <img alt = 'Profile art'></img>
-                   <span><p>+ Image</p></span>
-                   <h1>Group Name</h1>
+            <div className = 'newGroup'>
+                <div className='nGroupTop'>
+                    <div className='addGImg'>
+                   <img src={this.state.img} alt= ''></img>
+                   </div>
+                  
+                   <h1>{this.state.groupName}</h1>
                </div>
-               <div className='nPFlex'>
+               <div className='nGFlex'>
                
-               <input className='selectGroup' type='checkbox' name='isPrivate' onChange={this.handleCheck}></input><p>Private</p>
-               <input className='selectGroup' type='checkbox' name='searchable' onChange={this.handleCheck}></input><p>Searchable</p>
-               
-               <div className='nPFlexMid'>
-                <input placeholder='Group Title' name='groupName' onChange={this.handleChange}></input>
-                <input placeholder='Description' name='description' onChange={this.handleChange}></input>
-                <button onClick={this.addGroup}>Create Group</button>
+               <input className='nGCheck' type='checkbox' name='isPrivate' onChange={this.handleCheck}></input><p>Private</p>
+               <input className='nGCheck' type='checkbox' name='searchable' onChange={this.handleCheck}></input><p>Searchable</p>
+               </div>
+               <div className='nGFlexMid'>
+               <input className='nGInput' type='text' name='img' placeholder='Image URL' onChange={this.handleChange}></input>
+                <input className='nGInput'  placeholder='Group Title' name='groupName' onChange={this.handleChange}></input>
+                <input  className='nGContent' placeholder='Description' name='description' onChange={this.handleChange}></input>
+                
                </div>
                <div>
                    
-                   <span><p>+ Members</p></span>
+               <button className='nGBtn' onClick={this.addGroup}>Create Group</button>
                </div>
+               
                </div>
-               </div>
+            </div>
             </div>
         )
     }

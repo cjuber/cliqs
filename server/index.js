@@ -74,7 +74,7 @@ app.put('/api/profile/:id', userCtrl.updateProfile)
 
 //Chat 
 
-io.on('connection', socket =>{
+io.on('connection', socket =>{ 
     console.log('User Connected')
     
     socket.on('join', async data =>{

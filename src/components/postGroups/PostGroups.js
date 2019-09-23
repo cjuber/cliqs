@@ -6,7 +6,7 @@ export default class PostGroups extends Component {
         const {group_name,id} = this.props.list
         
         return (
-            <option value={id}>
+            <option  value={id}>
                 
                 {group_name}
             </option>

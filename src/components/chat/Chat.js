@@ -64,18 +64,8 @@ export default class Chat extends Component {
     render() {
         console.log(this.state.room)
         return (
-            <div>
-                {/* <div className='container'>
-            <div className='dash'>
-            <NavOne/>
-            <div className='navCtnr2'>
-            <div className='navMid'>
-                <Link to='/group/:id/post'><h1>+ Post</h1></Link>
-                </div>
-                </div>
-            <NavTwo/> 
-            </div>
-            </div> */}
+            <div className='chatCtnr'>
+             
             <div className="chatApp">
         {this.state.joined ? <h1>My Room: {this.state.room}</h1> : null}
         <div>
@@ -95,7 +85,7 @@ export default class Chat extends Component {
             :
             <div>
               
-              <button onClick={this.joinRoom}>Chat</button>
+              <button className='chatBtn' onClick={this.joinRoom}>Chat</button>
             </div>
         }
       </div>

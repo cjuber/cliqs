@@ -25,7 +25,7 @@ const login = async (req,res) => {
     
     const authedPass = bcrypt.compareSync(password, findUser[0].password)
     if(authedPass){
-        delete findUser.password
+        delete findUser[0].password
         
         req.session.user = findUser[0]
        

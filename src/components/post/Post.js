@@ -42,6 +42,7 @@ class Post extends Component {
             )
         })
         return (
+            <div className='post'>
             <div className='container'>
             <div className='dash'>
             <NavOne/>
@@ -52,8 +53,17 @@ class Post extends Component {
                 </div>
             <NavTwo/> 
             </div>
-            <button onClick={this.deletePost}>Delete Post</button>
+            <div className='post2'>
+            <div className='post3'>
+            <div>
             {mappedPosts}
+            </div>
+            <div>
+            <button className='deletePost' onClick={this.deletePost}>Delete Post</button>
+            </div>
+            </div>
+            </div>
+            </div>
             </div>
         )
     }

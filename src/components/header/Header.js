@@ -45,16 +45,18 @@ class Header extends Component {
                         <img src = {require('../../assets/Logo.png')} className = 'logo' alt='logo'/>
                        
                     </div>
+                    <div className='mobileBar'>
                     <div className='findGroups'>
                     <Link to='/find_group' className='link'><span><p className='pGroups'>Find Groups</p></span></Link>
                     </div>
                     <div className='addGroups'>
                     <Link to='/add_group' className='link'><span><p className='paGroups'>+ Group</p></span> </Link>
                     </div>
+                    </div>
                     <span onClick={this.changeDisplay}>
-                    <div className='profiileImg'>
+                    <div className='profileImg'>
                     
-                        <img src={this.props.user_img} width='50'></img>
+                        <img src={this.props.id.user_img} alt=''></img>
                         
                         </div> 
                         </span> 

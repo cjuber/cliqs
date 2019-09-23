@@ -2,7 +2,7 @@ const addPost = async (req,res) =>{
 const {
     title,
     postText,
-    img,
+    postImg,
 } = req.body
 const {id,group_id}=req.params
 const db = req.app.get('db')
@@ -10,7 +10,7 @@ const getNames = await db.get_names(id)
 const {first_name,last_name} = getNames[0]
 const getGroup = await db.get_group_name(group_id)
 const {group_name} = getGroup[0]
-const createPost = await db.add_post(id,group_id,title,postText,img,first_name,last_name,group_name)
+const createPost = await db.add_post(id,group_id,title,postText,postImg,first_name,last_name,group_name)
 res.status(200).send('Post made')
 }
 

@@ -72,7 +72,7 @@ class Auth extends Component {
                 <div className='authHeader'> 
                 <div className='mobileBar'></div>
                 <div className = 'authLogo'>
-
+                <img src = {require('../../assets/Logo.png')} className = 'logo' alt='logo'/>
                 </div>
                     {
                         this.state.display ?
