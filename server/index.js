@@ -12,6 +12,7 @@ const userCtrl = require('./userController')
 
 const {SESSION_SECRET, CONNECTION_STRING, SERVER_PORT} = process.env
 
+
 const app = express()
   const io = socket(app.listen(SERVER_PORT, () => 
     console.log(chalk.yellow.bgBlue('Server running'))
@@ -47,7 +48,6 @@ app.get('/auth/logout', authCtrl.logout)
 
 //group
 app.post('/api/add_group', grpCtrl.addGroup)
-
 app.get('/api/groups/:id', grpCtrl.getGroups)
 app.get('/api/groups', grpCtrl.allGroups)
 app.get('/api/group/:id', grpCtrl.getGroup)
@@ -90,9 +90,9 @@ io.on('connection', socket =>{
     })
 
     socket.on('message sent', async data => {
-        const { room, message } = data
+        const { room, message,userName } = data
         const db = app.get('db')
-        await db.create_message(room, message)
+        await db.create_message(room, message,userName)
         let messages = await db.get_chat_messages(room )
         io.to(data.room).emit('message dispatched', messages)
     });

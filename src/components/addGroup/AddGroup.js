@@ -47,7 +47,8 @@ class AddGroup extends Component {
             description,
             id
         }
-        axios.post('http://localhost:8080/api/add_group', body)
+        const {REACT_APP_PORT} = process.env
+        axios.post(`${REACT_APP_PORT}/api/add_group`, body)
         .then(response => {
             this.props.history.push('/dashboard')
         })

@@ -20,7 +20,8 @@ class Header extends Component {
     }
 
     logout = () => {
-        axios.get('http://localhost:8080/auth/logout')
+        const{REACT_APP_PORT} = process.env
+        axios.get(`${REACT_APP_PORT}/auth/logout`)
         .then(()=>{
             this.props.history.push('/')
         })
@@ -53,13 +54,22 @@ class Header extends Component {
                     <Link to='/add_group' className='link'><span><p className='paGroups'>+ Group</p></span> </Link>
                     </div>
                     </div>
-                    <span onClick={this.changeDisplay}>
-                    <div className='profileImg'>
+                    <div className='dsktpHeader'>
+                    <div className='findGroups'>
+                    <Link to='/find_group' className='link'><span><p className='pGroups'>Find Groups</p></span></Link>
+                    </div>
+                    <div className='addGroups'>
+                    <Link to='/add_group' className='link'><span><p className='paGroups'>+ Group</p></span> </Link>
+                    </div>
+                    </div>
                     
-                        <img src={this.props.id.user_img} alt=''></img>
                         
-                        </div> 
+                    <div className='profileImg'>
+                    <span onClick={this.changeDisplay}>
+                        <img src={this.props.id.user_img} alt=''></img>
                         </span> 
+                        </div> 
+                        
                         <div className={
                             this.state.display ?
                             'hdrMenu'
@@ -74,7 +84,7 @@ class Header extends Component {
                             </ul>
 
                         </div>
-                    <div className='headerName' >
+                    <div className='headerName'>
                         <span onClick={this.changeDisplay}>
                         <div>
                         <h1 className='name'>{this.props.first_name.first_name} {this.props.last_name.last_name}</h1>

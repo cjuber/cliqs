@@ -26,8 +26,9 @@ class FindGroup extends Component {
         
     }
 
-    getGroups = () => {       
-        axios.get(`http://localhost:8080/api/groups`)
+    getGroups = () => {   
+        const {REACT_APP_PORT} =process.env    
+        axios.get(`${REACT_APP_PORT}/api/groups`)
         .then(response => {
             this.setState({
                 list: response.data
@@ -36,9 +37,10 @@ class FindGroup extends Component {
     }
 
     getMyGroups = () => {
+        const {REACT_APP_PORT} = process.env
         const id = this.props.id.id
             
-        axios.get(`http://localhost:8080/api/groups/${id}`)
+        axios.get(`${REACT_APP_PORT}/api/groups/${id}`)
         .then(response => {
             this.setState({
                 list: response.data

@@ -17,6 +17,7 @@ class Group extends Component {
             group_name: '',
             description: '',
             member: false,
+            userName:'',
             list:[]
         }
     }
@@ -24,11 +25,16 @@ class Group extends Component {
         this.getGroup()
         this.checkMember()
         this.getPosts()
+        const name = this.props.first_name.first_name + ' ' + this.props.last_name.last_name
+        this.setState({
+            userName:name
+        })
     }
     getGroup = () =>{
+        const {REACT_APP_PORT}=process.env
         const id= this.props.match.params.id
         
-         axios.get(`http://localhost:8080/api/group/${id}`)
+         axios.get(`${REACT_APP_PORT}/api/group/${id}`)
          .then(response => {
              
              this.props.updateGroup(response.data[0])
@@ -37,8 +43,9 @@ class Group extends Component {
      }
      
         getPosts = ()=>{
+            const {REACT_APP_PORT} = process.env
             const{id}=this.props.match.params
-            axios.get(`http://localhost:8080/api/group/posts/${id}`)
+            axios.get(`${REACT_APP_PORT}/api/group/posts/${id}`)
             .then(response => {
               
                 this.setState({
@@ -49,10 +56,11 @@ class Group extends Component {
      
 
     checkMember = () => {
+        const {REACT_APP_PORT} = process.env
         const id= this.props.id.id
         const group_id = this.props.match.params.id
         
-        axios.get(`http://localhost:8080/api/group/${group_id}/member/${id}`)
+        axios.get(`${REACT_APP_PORT}/api/group/${group_id}/member/${id}`)
         .then(response =>{
             
             if(response.data.length >= 1){
@@ -70,9 +78,10 @@ class Group extends Component {
         
     }
     leave = () => {
+        const {REACT_APP_PORT} = process.env
         const id= this.props.id.id
         const group_id = this.props.match.params.id
-        axios.delete(`http://localhost:8080/api/group/${group_id}/member/${id}`)
+        axios.delete(`${REACT_APP_PORT}/api/group/${group_id}/member/${id}`)
         .then(response => {
             this.setState({
                 member: false
@@ -81,9 +90,10 @@ class Group extends Component {
     }
 
     join = () => {
+        const {REACT_APP_PORT} = process.env
         const id= this.props.id.id
         const group_id = this.props.match.params.id
-        axios.put(`http://localhost:8080/api/group/${group_id}/member/${id}`)
+        axios.put(`${REACT_APP_PORT}/api/group/${group_id}/member/${id}`)
         .then(response => {
             this.setState({
                 member: true
@@ -92,6 +102,7 @@ class Group extends Component {
     }
     
     render() {
+        
         const id= this.props.match.params.id
         const pathname = `/post/${id}`
         const mappedPosts = this.state.list.map((list,index) => {
@@ -106,7 +117,7 @@ class Group extends Component {
             <NavOne/>
             <div className='navCtnr2'>
             <div className='navMid'>
-                <Link to='/post'><h1>+ Post</h1></Link>
+                <Link className='link' to='/post'><h1>+ Post</h1></Link>
                 </div>
                 </div>
             <NavTwo/> 
@@ -126,7 +137,7 @@ class Group extends Component {
             </div>
             </div>
             <div className='groupInfoLinks'>
-           <Link to={pathname}><h2>+ Post</h2></Link> 
+           <Link className='link' to={pathname}><h2>+ Post</h2></Link> 
             {
                 this.state.member ?
                 <h2 onClick={this.leave}>Leave</h2>
@@ -134,9 +145,10 @@ class Group extends Component {
                 <h2 onClick={this.join}>Join</h2>
             }
             </div>
-           <div className='chat'>
-            <Chat id={id}/>
+           
            </div>
+           <div className='chat'>
+            <Chat id={id} group_name={this.props.group_name.group_name} userName={this.state.userName}/>
            </div>
            <div className='groupPostsC'>
                 {mappedPosts}

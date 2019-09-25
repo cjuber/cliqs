@@ -5,6 +5,7 @@ Last Updated: 2010-09-17
 Author: Richard Clark - http://richclarkdesign.com 
 Twitter: @rich_clark
 */
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -102,6 +103,7 @@ input, select {
 
 .app {
   background: #CECECE;
+  font-family: 'Roboto', sans-serif;
 }
 
 .authCtnr {
@@ -206,14 +208,12 @@ input, select {
   background: #FB5153;
 }
 
-.logoC {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 1;
-}
-
 .logo {
   width: 70px;
+}
+
+.dsktpHeader {
+  display: none;
 }
 
 .mobileBar {
@@ -360,12 +360,6 @@ input, select {
 }
 
 .headerName {
-  width: 100%;
-  height: 100%;
-  border-left: 1.5px solid #ccc;
-  -ms-grid-column: 5;
-      grid-column-start: 5;
-  grid-column-end: 5;
   display: none;
 }
 
@@ -772,6 +766,10 @@ input, select {
   height: 50%;
 }
 
+.selectGroup {
+  background: #49D6EF;
+}
+
 .nPFlexMid {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1059,7 +1057,9 @@ input, select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 90%;
+  width: 95%;
+  margin-right: 10%;
+  margin-bottom: 100px;
 }
 
 .chatBtn {
@@ -1073,9 +1073,16 @@ input, select {
   background: #49D6EF;
   font-size: 16px;
   margin-bottom: 10px;
+  margin-left: 45%;
+}
+
+.chat {
+  width: 95%;
 }
 
 .chatCtnr {
+  -webkit-box-shadow: .5px .5px 5px 1px;
+          box-shadow: .5px .5px 5px 1px;
   margin-top: 20px;
   width: 100%;
   display: -webkit-box;
@@ -1084,15 +1091,37 @@ input, select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: white;
 }
 
 .chatApp {
   width: 100%;
+  margin: 20px;
+}
+
+.chatMess {
+  margin: 10px;
+}
+
+.chatInput {
+  margin: 10px;
+  border: 1px solid black;
+  padding: 10px;
+  width: 350px;
 }
 
 @media only screen and (min-width: 760px) {
   .app {
     background: #CECECE;
+  }
+  .BG {
+    position: fixed;
+    top: 70px;
+    left: 100px;
+    background: #CECECE;
+    width: 1000px;
+    height: 700px;
+    z-index: -1;
   }
   .authHeader {
     width: 100%;
@@ -1114,6 +1143,10 @@ input, select {
     height: 115px;
     border-right: 1.5px solid #ccc;
     display: inherit;
+  }
+  .logo {
+    width: 70px;
+    height: 70px;
   }
   .authInputC {
     margin-top: 50px;
@@ -1145,8 +1178,8 @@ input, select {
   }
   .pHdrBtn {
     position: fixed;
-    right: 80px;
-    top: 28px;
+    right: 70px;
+    top: 10px;
   }
   .authBtn {
     margin-top: 50px;
@@ -1161,46 +1194,85 @@ input, select {
   }
   .header {
     height: 70px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 33% 20% 20 20%;
-        grid-template-columns: 33% 20% 20 20%;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: 1px 0px 5px .5px;
+            box-shadow: 1px 0px 5px .5px;
+    z-index: 2;
   }
   .logoC {
-    display: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 21%;
     border-right: 1.5px solid #ccc;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+  .mobileBar {
+    display: none;
+  }
+  .dsktpHeader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 15%;
   }
   .findGroups {
-    display: inherit;
-    -ms-grid-column: 2;
-        grid-column-start: 2;
-    grid-column-end: 2;
+    height: 68px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 250px;
+    border: none;
+  }
+  .mappedGroups {
     width: 80%;
-    border-right: 1.5px solid #ccc;
+    margin-left: 20%;
   }
   .pGroups {
     font-size: 18px;
     margin-top: 25px;
-    margin-left: 28px;
   }
   .addGroups {
     display: inherit;
-    -ms-grid-column: 3;
-        grid-column-start: 3;
-    grid-column-end: 3;
-    width: 60%;
+  }
+  .paGroups {
+    font-size: 18px;
+    margin-top: 25px;
   }
   .headerName {
     display: inherit;
+    width: 150px;
+    height: 100%;
+    border-left: 1.5px solid #ccc;
+  }
+  .name {
+    font-size: 25px;
+    margin-top: 25px;
+    margin-left: 10px;
+  }
+  .profileImg {
+    top: 10px;
   }
   .hdrMenu {
     position: fixed;
     top: 70px;
     background: #FB5153;
-    width: 20%;
-    border-top: 1.5px solid #ccc;
+    width: 28%;
+    -webkit-box-shadow: -1px 4px 5px .2px;
+            box-shadow: -1px 4px 5px .2px;
   }
   .hdrMenu2 {
     display: none;
@@ -1227,26 +1299,35 @@ input, select {
             flex-direction: row;
     border-top: none;
     background: #CECECE;
-  }
-  .navCtnr {
-    width: 20%;
+    margin-top: 70px;
+    height: 100%;
   }
   .navCtnr2 {
-    width: 78%;
+    width: 100%;
   }
   .dsktpNav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
+  .dsktpNav h2 {
+    margin-left: 10px;
+    padding-bottom: 5px;
+    width: 120px;
+    border-bottom: 2px solid #ccc;
   }
   .mblNav {
     display: none;
   }
   .navOne {
-    width: 150px;
+    width: 100%;
     height: 15vh;
-    margin-left: 50%;
-    height: 20vh;
+    margin-left: 30%;
     border: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1255,27 +1336,26 @@ input, select {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 20px;
     background: white;
-    border-bottom: 1px solid #ccc;
-    border-right: .5px solid black;
   }
   .navOne h1 {
     border: none;
+    padding: 0px;
   }
   .navMid {
     margin-left: 15%;
-    height: 20vh;
+    height: 5vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    border-bottom: 1px solid #ccc;
+  }
+  .navMid h1 {
+    border: none;
+    padding: 0;
   }
   .navTwo {
     margin-left: 12%;
@@ -1288,67 +1368,95 @@ input, select {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-top: 20px;
-    border-right: 1px solid #ccc;
     background: white;
+  }
+  .navGroupList {
+    height: 100px;
+    width: 100px;
+    margin-top: 20px;
+    margin-left: 25%;
+  }
+  .navGroupList img {
+    width: 50px;
+    height: 50px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 50px;
   }
   .dash {
-    width: 20%;
+    width: 21%;
     height: 95vh;
-    border-right: .1px solid #ccc;
+    -webkit-box-shadow: 1px 0px 5px .5px;
+            box-shadow: 1px 0px 5px .5px;
     border-top: none;
-    position: initial;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+    top: 70px;
+    z-index: 1;
   }
   .postsCtnr {
-    min-height: 40%;
+    min-height: 800px;
     margin-top: 20px;
-    width: 50%;
+    width: 80%;
     background: white;
-    margin-left: 4%;
     -webkit-box-shadow: .5px .5px 5px 1px;
             box-shadow: .5px .5px 5px 1px;
     border-top: 10px solid #49D6EF;
+    margin-left: 27%;
+  }
+  .postsCtnr img {
+    margin-left: 5%;
+    width: 90%;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .cardTitle {
-    height: 20%;
+    height: 20px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-left: 5%;
+    margin-bottom: 10px;
+    margin-top: 10px;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
   }
   .cardTitle h1 {
-    font-size: 18px;
+    font-size: 20px;
     margin: 0 3px;
   }
   .cardTitle h2 {
-    font-size: 15px;
+    font-size: 18px;
     margin: 0 3px;
   }
   .cardTitle h3 {
-    font-size: 12px;
+    font-size: 16px;
     margin: 0 3px;
     color: grey;
   }
   .cardTitle2 {
-    height: 20%;
+    height: 10px;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: 5%;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    margin: 0 0 0 5%;
   }
   .cardTitle2 h2 {
-    font-size: 15px;
+    font-size: 18px;
     margin: 0 3px;
   }
   .cardTitle2 h3 {
-    font-size: 12px;
+    font-size: 16px;
     margin: 0 3px;
     color: grey;
   }
@@ -1357,8 +1465,20 @@ input, select {
     width: 90%;
     font-size: 18px;
     margin-left: 5%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  .pCard h4 {
+    font-size: 20px;
+  }
+  .pCard p {
+    font-size: 18px;
+  }
+  .nPostCntnr {
+    height: 90vh;
+  }
+  .newPosts {
+    margin-left: 25%;
   }
   .nPostTop {
     display: -webkit-box;
@@ -1366,11 +1486,29 @@ input, select {
     display: flex;
     margin-left: 25%;
   }
+  .nPostTop h1 {
+    margin-top: 25px;
+    margin-left: 20px;
+    font-size: 35px;
+  }
+  .nPostImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+  }
+  .nPostImg img {
+    width: 100px;
+    height: 100px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 50px;
+  }
   .nPFlex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin-left: 15%;
+    margin-top: 20px;
   }
   .nPFlexMid {
     display: -webkit-box;
@@ -1380,6 +1518,97 @@ input, select {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .nPostInput {
+    width: 400px;
+    height: 30px;
+  }
+  .nPostContent {
+    width: 400px;
+  }
+  .postBtn {
+    margin-top: 20px;
+  }
+  .deletePost {
+    margin-bottom: 50px;
+  }
+  .addGroup {
+    width: 100%;
+    height: 90vh;
+  }
+  .newGroup {
+    background: white;
+    width: 68%;
+    height: 90%;
+    margin-left: 25%;
+    margin-top: 3%;
+    -webkit-box-shadow: .5px .5px 5px 1px;
+            box-shadow: .5px .5px 5px 1px;
+  }
+  .nGroupTop {
+    height: 25%;
+    margin-left: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nGroupTop h1 {
+    margin-top: 40px;
+    margin-left: 20px;
+    font-size: 40px;
+  }
+  .nGFlex {
+    height: 8%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nGInput {
+    width: 550px;
+    height: 35px;
+  }
+  .nGContent {
+    width: 550px;
+  }
+  .groupInfo {
+    width: 72%;
+    margin-left: 21%;
+  }
+  .groupPostsC {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 90%;
+    margin-right: 10%;
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+  .chatCtnr {
+    width: 76%;
+    margin-left: 23%;
+  }
+  .profileCtnr {
+    width: 80%;
+    margin-left: 21%;
+  }
+  .profileTop2 h1 {
+    font-size: 20px;
+  }
+  .profileTop2 p {
+    font-size: 18px;
+  }
+  .profileBtm h2 {
+    font-size: 20px;
+  }
+  .profileBtm h3 {
+    font-size: 18px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

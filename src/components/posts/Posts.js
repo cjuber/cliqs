@@ -22,9 +22,7 @@ export default class Posts extends Component {
                 </p> 
                 </div>
                 <img src={post_img} alt=''></img>
-                <div>
-                    {/* bottom bar goes here */}
-                </div>
+                
                 
              
             </div></Link>

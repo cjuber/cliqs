@@ -18,9 +18,10 @@ class Post extends Component {
     }
 
     getPost = ()=>{
+        const{REACT_APP_PORT}=process.env
         const{id}=this.props.match.params
         console.log(id)
-        axios.get(`http://localhost:8080/api/post/${id}`)
+        axios.get(`${REACT_APP_PORT}/api/post/${id}`)
         .then(response => {
             console.log(response.data)
             this.setState({
@@ -29,8 +30,9 @@ class Post extends Component {
         })
     }
     deletePost = () => {
+        const {REACT_APP_PORT} =process.env
         const{id}=this.props.match.params
-        axios.delete(`http://localhost:8080/api/post/${id}`)
+        axios.delete(`${REACT_APP_PORT}/api/post/${id}`)
         .then(response => {
             this.props.history.push('/dashboard')
         })
@@ -48,7 +50,7 @@ class Post extends Component {
             <NavOne/>
             <div className='navCtnr2'>
             <div className='navMid'>
-                <Link to='/post'><h1>+ Post</h1></Link>
+                <Link className='link' to='/post'><h1>+ Post</h1></Link>
                 </div>
                 </div>
             <NavTwo/> 

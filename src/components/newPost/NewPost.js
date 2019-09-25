@@ -29,9 +29,10 @@ class NewPost extends Component {
     }
 
     getGroups = () => {
+        const {REACT_APP_PORT} = process.env
         const id = this.props.id.id
             
-        axios.get(`http://localhost:8080/api/groups/${id}`)
+        axios.get(`${REACT_APP_PORT}/api/groups/${id}`)
         .then(response => {
             this.setState({
                 list: response.data
@@ -45,9 +46,10 @@ class NewPost extends Component {
         })
     }
     choseGroup = (e) => {
+        const {REACT_APP_PORT} = process.env
         const id= e.target.value
         
-        axios.get(`http://localhost:8080/api/group/${id}`)
+        axios.get(`${REACT_APP_PORT}/api/group/${id}`)
         .then(response => {
             
             this.props.updateGroup(response.data[0])
@@ -68,7 +70,8 @@ class NewPost extends Component {
             postText,
             postImg
         }
-        axios.post(`http://localhost:8080/api/group/${group_id}/post/${id}`, body)
+        const {REACT_APP_PORT} = process.env
+        axios.post(`${REACT_APP_PORT}/api/group/${group_id}/post/${id}`, body)
         .then(response => {
             this.props.history.push('/dashboard')
         })

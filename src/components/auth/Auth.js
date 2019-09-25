@@ -33,8 +33,9 @@ class Auth extends Component {
     }
 
     register  = () => {
+        const {REACT_APP_PORT} = process.env
         const {firstName, lastName, email,password} =this.state
-        axios.post('http://localhost:8080/auth/register', {firstName, lastName, email,password})
+        axios.post(`${REACT_APP_PORT}/auth/register`, {firstName, lastName, email,password})
         .then(response => {
            
             this.props.updateUser([response.data])
@@ -50,8 +51,10 @@ class Auth extends Component {
     }
 
     login = () => {
+        const {REACT_APP_PORT} = process.env
         const{email, password} = this.state
-        axios.post('http://localhost:8080/auth/login', {email,password})
+        
+        axios.post(`${REACT_APP_PORT}/auth/login`, {email,password})
         .then(response =>{
             
             this.props.updateUser(response.data)

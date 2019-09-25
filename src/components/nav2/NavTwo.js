@@ -23,9 +23,10 @@ class NavTwo extends Component {
     }
 
     getGroups = () => {
+        const {REACT_APP_PORT} = process.env
         const id = this.props.id.id
             
-        axios.get(`http://localhost:8080/api/groups/${id}`)
+        axios.get(`${REACT_APP_PORT}/api/groups/${id}`)
         .then(response => {
             this.setState({
                 gList: response.data
@@ -50,11 +51,11 @@ class NavTwo extends Component {
                     :
                     (<div className='navTwo'>
                         <div className='dsktpNav'> 
-                        <Link className='link' to={pathname} className='link'><h1>Groups</h1></Link>
+                        <Link className='link' to={pathname} ><h2>Groups</h2></Link>
                         {mappedGroups}
                         </div>
                         <div className='mblNav'>
-                        <Link className='link' to={pathname} className='link'><h1>Groups</h1></Link>
+                        <Link className='link' to={pathname} ><h1>Groups</h1></Link>
                         </div>
                     </div>)
                 } 

@@ -18,8 +18,9 @@ class Dashboard extends Component {
     }
 
     getPosts = ()=>{
+        const{REACT_APP_PORT} = process.env
         const{id}=this.props.id
-        axios.get(`http://localhost:8080/api/posts/${id}`)
+        axios.get(`${REACT_APP_PORT}/api/posts/${id}`)
         .then(response => {
            
             this.setState({
@@ -40,7 +41,7 @@ class Dashboard extends Component {
             <NavOne/>
             <div className='navCtnr2'> 
             <div className='navMid'>
-                <Link className='link' to='/post' className='link'><h1>+ Post</h1></Link>
+                <Link className='link' to='/post' ><h1>+ Post</h1></Link>
                 </div>
                 </div>
             <NavTwo/> 

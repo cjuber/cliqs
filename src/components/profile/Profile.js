@@ -67,8 +67,9 @@ submit = () => {
         about:this.state.about,
         user_img:this.state.user_img
     }
+    const {REACT_APP_PORT} = process.env
     const {id}=this.props.id
-    axios.put(`http://localhost:8080/api/profile/${id}`, body)
+    axios.put(`${REACT_APP_PORT}/api/profile/${id}`, body)
     this.setState({
         display:false
     })
@@ -84,7 +85,7 @@ submit = () => {
             <NavOne/>
             <div className='navCtnr2'>
             <div className='navMid'>
-                <Link to='/post'><h1>+ Post</h1></Link>
+                <Link className='link' to='/post'><h1>+ Post</h1></Link>
                 </div>
                 </div>
             <NavTwo/> 

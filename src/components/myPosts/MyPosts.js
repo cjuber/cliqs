@@ -18,8 +18,10 @@ class MyPosts extends Component {
     }
 
     getPosts = ()=>{
+
+        const{REACT_APP_PORT} =process.env
         const{id}=this.props.id
-        axios.get(`http://localhost:8080/myposts/${id}`)
+        axios.get(`${REACT_APP_PORT}/myposts/${id}`)
         .then(response => {
             console.log(response.data)
             this.setState({

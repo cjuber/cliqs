@@ -11,13 +11,16 @@ export default class Chat extends Component {
           input: '',
           messages: [],
           room: '',
+          userName:'',
           joined: false
         }    
         
       }
       componentDidMount() {
+        
         this.setState({
-            room:this.props.id
+            room:this.props.id,
+            
         })
         this.socket = io();
         this.socket.on('room joined', data => {
@@ -32,9 +35,11 @@ export default class Chat extends Component {
         this.socket.disconnect();
       }
       sendMessage = () => {
+        
         this.socket.emit('message sent', {
           message: this.state.input,
-          room: this.state.room
+          room: this.state.room,
+          userName:this.state.userName
         })
         this.setState({
           input: ''
@@ -47,7 +52,9 @@ export default class Chat extends Component {
       }
       joinRoom = () => {
         
-
+        this.setState({
+          userName: this.props.userName
+        })
         
         
           this.socket.emit('join', {
@@ -62,25 +69,27 @@ export default class Chat extends Component {
         })
       }
     render() {
-        console.log(this.state.room)
+        
         return (
             <div className='chatCtnr'>
              
             <div className="chatApp">
-        {this.state.joined ? <h1>My Room: {this.state.room}</h1> : null}
-        <div>
-          {this.state.messages.map(messageObj => <h2 key={messageObj.id}>{messageObj.message}</h2>)}
+        {this.state.joined ? <h1>Chat for {this.props.group_name} </h1> : null}
+        <div className='chatMess'>
+          {this.state.messages.map(messageObj => 
+          
+          <h2 key={messageObj.id}>{messageObj.user_name}: {messageObj.message}</h2>)}
         </div>
         {
           this.state.joined
             ?
             <div>
-              <input value={this.state.input} onChange={e => {
+              <input className='chatInput' value={this.state.input} onChange={e => {
                 this.setState({
                   input: e.target.value
                 })
               }} />
-              <button onClick={this.sendMessage}>Send</button>
+              <button  className='chatBtn' onClick={this.sendMessage}>Send</button>
             </div>
             :
             <div>

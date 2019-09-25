@@ -9,7 +9,7 @@ export default class App extends Component {
       <div className='app'>
        <Header/>
        {routes}
-       
+       <div className='BG'></div>
        
       </div>
     )

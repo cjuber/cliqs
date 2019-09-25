@@ -1,5 +1,15 @@
 .app{
     background:$mainBack;
+    
+}
+.BG{
+    position: fixed;
+    top: 70px;
+    left: 100px;
+    background: $mainBack;
+    width: 1000px;
+    height: 700px;
+    z-index: -1;
 }
 .authHeader {
     width: 100%;
@@ -23,6 +33,10 @@
     height: 115px;
     border-right: 1.5px solid #ccc; 
     display: inherit;
+}
+.logo{
+    width: 70px;
+    height: 70px;
 }
 .authInputC{
     margin-top: 50px;
@@ -48,8 +62,8 @@
 }
 .pHdrBtn {
     position: fixed;
-    right: 80px;
-    top: 28px;
+    right: 70px;
+    top: 10px;
 }
 
 .authBtn{
@@ -64,51 +78,91 @@
 .header{
 
     height: 70px;
-    display: grid;
-    grid-template-columns: 33% 20% 20 20%;
-    grid-template-rows: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 1px 0px 5px .5px;
+    z-index: 2;
 }
 
 .logoC{
-    display: inherit;
+    display: flex;
+    width:21%;
     border-right: 1.5px solid #ccc;
-}
-
-.findGroups{
-    display:inherit;
-    grid-column-start: 2;
-    grid-column-end: 2;
-    width:80%;
     
-    border-right: 1.5px solid #ccc; 
+    
+        position: fixed;
+        left: 0;
+        top: 0;
+    
+    
+}
+.mobileBar{
+    display: none;
+}
+.dsktpHeader{
+    display: flex;
+    margin-left: 15%;
+    
+}
+.findGroups{
+       height: 68px;
+   display: flex;
+   justify-content: center;   
+      width: 250px;
+    border: none;    
+   
+}
+.mappedGroups{
+    width: 80%;
+    margin-left: 20%;
 }
 .pGroups{
     font-size: 18px;
-    margin-top: 25px;
-    margin-left:28px;
+   margin-top: 25px;
+   
 }
 .addGroups{
     display: inherit;
-    grid-column-start: 3;
-    grid-column-end: 3;
-    width:60%;
+    
+    
+    
+   
 }
-
+.paGroups{
+    font-size: 18px;
+    margin-top: 25px;
+}
 .headerName{
     display: inherit;
+    width: 150px;
+    height: 100%;
+    border-left: 1.5px solid #ccc;
+}
+.name{
+    font-size: 25px;
+    margin-top: 25px;
+    margin-left: 10px;
+    
+}
+.profileImg{
+    top:10px;
+   
 }
 .hdrMenu{
     position: fixed;
     top: 70px;
     background: $headerColor;
-    width:20%;
+    width:28%;
+    box-shadow: -1px 4px 5px .2px;
     
-    border-top: 1.5px solid #ccc;
+    
     
 }
 .hdrMenu2{
     display: none;
 }
+
 .dash-posts{
     
     height: 100%;
@@ -119,49 +173,64 @@
 
 }
 .container{
+    
     display:flex;
     flex-direction: row;
     border-top:none;
     background:$mainBack;
+     margin-top: 70px;
+     height:100%;
 }
     
-.navCtnr{
+.navCtnr2{
      
-     width: 20%;
-}.navCtnr2{
-     
-    width: 78%;
+    width: 100%;
 }
 .dsktpNav{
     display: flex;
+   flex-direction: column;
+   height: 100%;
+   
+   h2{
+       margin-left: 10px;
+       padding-bottom: 5px;;
+       width:120px;
+       border-bottom: 2px solid #ccc
+   }
    
 }
 .mblNav{
     display:none;
 }
 .navOne {
-    width: 150px;
+    width: 100%;
     height:15vh;
-    margin-left: 50%;
-    height:20vh;
+    margin-left: 30%;
     border: none;
     display: flex;
     flex-direction: column;
-    
+    align-items: flex-start;
+    margin-top: 20px;
     background: $secBack;
-    border-bottom:1px solid #ccc;
-    border-right: .5px solid black;
+    
+    
    h1{
        border: none;
+       padding: 0px;
    }
 }
 .navMid{
     margin-left: 15%;
-    height: 20vh; 
+    height:5vh; 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-bottom:1px solid #ccc ;
+    
+    
+    
+    h1{
+        border: none;
+       padding: 0;
+       
+    }
 }
 .navTwo {
     margin-left: 12%;
@@ -169,61 +238,89 @@
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    border-right: 1px solid #ccc ;
     background: $secBack;
 }
+.navGroupList{
+    height: 100px;
+    width: 100px;
+    margin-top: 20px;
+    margin-left: 25%;
+    img{
+        width:50px;
+        height:50px;
+        object-fit: cover;
+        border-radius: 50px; 
+    }
+}
 .dash{
-    width: 20%;
+    width: 21%;
     height:95vh;
-    border-right: .1px solid #ccc ;
+    box-shadow: 1px 0px 5px .5px;
     border-top: none;
-    position: initial;
+   
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    z-index: 1;
+
 }
 
 .postsCtnr{
     
-    min-height: 40%;
+    min-height: 800px;
+   
     margin-top: 20px;
-    width: 50%;
+    width: 80%;
     background: $secBack;
-    margin-left: 4%;
+   
     box-shadow: .5px .5px 5px 1px;
     border-top: 10px solid #49D6EF;
+    margin-left: 27%;
+    img{
+        margin-left: 5%;
+        width: 90%;
+        height: 400px;
+        object-fit: cover;
+    }
 }
 .cardTitle{
-    height: 20%;
+    height: 20px;
     width: 100%;
     display: flex;
     margin-left: 5%;
+    margin-bottom: 10px;
+    margin-top: 10px;
     align-items: flex-end;
 
 }
 .cardTitle h1 {
-    font-size: 18px;
+    font-size: 20px;
     margin: 0 3px;
 }
 .cardTitle h2 {
-    font-size: 15px;
+    font-size: 18px;
     margin: 0 3px;
 }
 .cardTitle h3 {
-    font-size: 12px;
+    font-size: 16px;
     margin: 0 3px;
     color: grey;
 }
 .cardTitle2{
-    height: 20%;
+   height:10px;
     width: 100%;
     display: flex;
-    margin-left: 5%;
-    align-items: flex-end;
+    
+    margin: 0 0 0 5%;
+   
 }
 .cardTitle2 h2 {
-    font-size: 15px;
+    font-size: 18px;
     margin: 0 3px;
 }
 .cardTitle2 h3 {
-    font-size: 12px;
+    font-size: 16px;
     margin: 0 3px;
     color: grey;
 }
@@ -233,19 +330,137 @@
     width: 90%;
     font-size: 18px;
     margin-left: 5%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    h4{
+        font-size: 20px;
+    }
+    p{
+        font-size: 18px;
+    }
+}
+.nPostCntnr{
+    height: 90vh;
+}
+.newPosts{
+    margin-left: 25%;
 }
 .nPostTop{
     display: flex;
     margin-left: 25%;
-
+    h1{
+        margin-top: 25px;
+        margin-left: 20px;
+        font-size: 35px;
+    }
+}
+.nPostImg{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    img{
+        width:100px;
+        height:100px;
+        object-fit: cover;
+        border-radius: 50px;
+    }
 }
 .nPFlex{
     display: flex;
     margin-left: 15%;
+    margin-top: 20px;
 }
 .nPFlexMid{
     display: flex;
     flex-direction: column;
+}
+.nPostInput{
+    width: 400px;
+    height: 30px;    
+}
+.nPostContent{
+    width: 400px;
+}
+.postBtn{
+    margin-top: 20px;
+}
+.deletePost{
+    margin-bottom: 50px;
+}
+.addGroup{
+    width: 100%;
+    height: 90vh;
+   
+}
+.newGroup{
+    background: white;
+    width: 68%;
+    height: 90%;
+    margin-left: 25%;
+    margin-top: 3%;
+    box-shadow: .5px .5px 5px 1px;  
+}
+.nGroupTop{
+    height: 25%;
+    margin-left: 10px;    
+    display: flex;
+    h1{
+        margin-top: 40px;
+        margin-left: 20px;
+        font-size: 40px;
+    }
+}
+.nGFlex{
+    height:8%;
+    
+    display: flex;
+    
+}
+.nGInput{
+
+    width: 550px;
+    height: 35px;
+}
+.nGContent{
+    width: 550px;
+}
+.groupInfo{
+    width: 72%;
+    margin-left: 21%;
+}
+.groupPostsC{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-right: 10%;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+.chatCtnr{
+   
+   width: 76%;
+   margin-left: 23%;
+    
+}
+.profileCtnr{
+    width: 80%;
+    margin-left: 21%;
+}
+.profileTop2{
+    h1{
+        font-size: 20px;
+    }
+    p{
+        font-size: 18px;
+    }
+}
+.profileBtm{
+    h2{
+        font-size: 20px;
+    }
+    h3{
+        font-size: 18px;
+    }
 }
