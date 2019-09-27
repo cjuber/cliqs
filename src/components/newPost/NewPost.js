@@ -122,7 +122,7 @@ class NewPost extends Component {
                </div>
                <div className='nPFlexMid'>
                 <input className='nPostInput' placeholder='Title'name='title' onChange={this.handleChange}></input>
-                <input className='nPostContent' placeholder='What would you like to say' name='postText' onChange={this.handleChange}></input>
+                <textarea className='nPostContent' type='text' placeholder='What would you like to say' name='postText' onChange={this.handleChange}></textarea>
                 <input className='nPostInput' placeholder='Image' name='postImg' onChange={this.handleChange}></input>
                </div>
                <div>

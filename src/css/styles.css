@@ -112,7 +112,6 @@ input, select {
 }
 
 .authHeader {
-  width: 100%;
   height: 80px;
   background: #FB5153;
   display: -webkit-box;
@@ -139,6 +138,8 @@ input, select {
       -ms-flex-align: center;
           align-items: center;
   background: white;
+  -webkit-box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
+          box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
 }
 
 .authInputC {
@@ -200,12 +201,25 @@ input, select {
   background-color: #49D6EF;
 }
 
+.BG {
+  position: fixed;
+  top: 70px;
+  background: #CECECE;
+  width: 1000px;
+  height: 700px;
+  z-index: -1;
+}
+
 .header {
   position: fixed;
   top: 0;
   width: 100%;
   height: 80px;
   background: #FB5153;
+}
+
+.logoC {
+  width: 100%;
 }
 
 .logo {
@@ -223,8 +237,8 @@ input, select {
   background: white;
   position: fixed;
   top: 65px;
-  -webkit-box-shadow: .5px 1.5px 5px 1px;
-          box-shadow: .5px 1.5px 5px 1px;
+  -webkit-box-shadow: 0.5px 1.5px 5px 1px #aca9a9;
+          box-shadow: 0.5px 1.5px 5px 1px #aca9a9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,7 +249,7 @@ input, select {
 
 .findGroups {
   border-right: 1px solid #ccc;
-  width: 50%;
+  width: 45%;
 }
 
 .link {
@@ -255,6 +269,7 @@ input, select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 20%;
 }
 
 .listGroups {
@@ -264,8 +279,8 @@ input, select {
   margin-left: 5%;
   margin-bottom: 5px;
   margin-top: 5px;
-  -webkit-box-shadow: .5px 1.5px 5px 1px;
-          box-shadow: .5px 1.5px 5px 1px;
+  -webkit-box-shadow: 0.5px 1.5px 5px 1px #aca9a9;
+          box-shadow: 0.5px 1.5px 5px 1px #aca9a9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -332,7 +347,7 @@ input, select {
 }
 
 .addGroups {
-  width: 50%;
+  width: 45%;
 }
 
 .paGroups {
@@ -413,8 +428,10 @@ input, select {
 }
 
 .navOne h1 {
+  font-size: 14px;
   border: 1px solid #ccc;
-  padding: 20px;
+  padding: 21px;
+  background: #FB5153;
 }
 
 .navCtnr {
@@ -425,11 +442,19 @@ input, select {
 .mblNav h1 {
   border: 1px solid #ccc;
   padding: 20px;
+  background: #FB5153;
+}
+
+.mblNavOne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .navMid h1 {
   border: 1px solid #ccc;
   padding: 20px;
+  background: #FB5153;
 }
 
 .navCtnr3 {
@@ -467,8 +492,8 @@ input, select {
   width: 90%;
   height: 90%;
   background: white;
-  -webkit-box-shadow: .5px .5px 5px 1px;
-          box-shadow: .5px .5px 5px 1px;
+  -webkit-box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
+          box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
 }
 
 .profilePageImg {
@@ -556,8 +581,8 @@ input, select {
 }
 
 .dash {
-  -webkit-box-shadow: .5px -1.5px 5px 1px;
-          box-shadow: .5px -1.5px 5px 1px;
+  -webkit-box-shadow: 0.5px -1.5px 5px 1px #aca9a9;
+          box-shadow: 0.5px -1.5px 5px 1px #aca9a9;
   width: 100%;
   height: 8vh;
   position: fixed;
@@ -566,6 +591,8 @@ input, select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .container {
@@ -579,11 +606,13 @@ input, select {
   border-top: none;
   background: #CECECE;
   margin-top: 110px;
-  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
 .postCtnr {
-  width: 90%;
   margin-bottom: 80px;
 }
 
@@ -601,21 +630,22 @@ input, select {
           justify-content: space-evenly;
   -ms-flex-line-pack: end;
       align-content: flex-end;
-  width: 100%;
+  width: 84%;
   background: white;
-  margin-left: 5%;
-  -webkit-box-shadow: .5px .5px 5px 1px;
-          box-shadow: .5px .5px 5px 1px;
+  margin-left: 8%;
+  -webkit-box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
+          box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
   min-height: 275px;
   border-top: 5px solid #49D6EF;
 }
 
 .postsCtnr img {
-  width: 100%;
-  height: 170px;
+  width: 95%;
+  max-height: 300px;
   -o-object-fit: contain;
      object-fit: contain;
   margin-bottom: 10px;
+  margin-left: 2.5%;
 }
 
 .cardTitle {
@@ -627,6 +657,7 @@ input, select {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin-left: 10px;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -648,7 +679,7 @@ input, select {
 }
 
 .cardTitle2 {
-  margin: 10px 0;
+  margin: 10px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -668,7 +699,7 @@ input, select {
 }
 
 .pCard {
-  margin: 25px 0;
+  margin: 25px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -699,9 +730,10 @@ input, select {
   display: flex;
   margin: 5%;
   width: 90%;
-  height: 90%;
-  -webkit-box-shadow: .5px .5px 5px 1px;
-          box-shadow: .5px .5px 5px 1px;
+  height: 500px;
+  margin-bottom: 20%;
+  -webkit-box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
+          box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
 }
 
 .newPosts2 {
@@ -802,6 +834,7 @@ input, select {
           box-sizing: border-box;
   margin: 10px 0;
   font-size: 18px;
+  vertical-align: text-top;
 }
 
 .postBtn {
@@ -855,8 +888,8 @@ input, select {
   font-size: 16px;
   margin-top: 5px;
   margin-left: 36%;
-  -webkit-box-shadow: .5px .5px 5px 1px;
-          box-shadow: .5px .5px 5px 1px;
+  -webkit-box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
+          box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
 }
 
 .addGroup {
@@ -867,11 +900,12 @@ input, select {
 .newGroup {
   background: white;
   width: 90%;
-  height: 90%;
+  height: 500px;
   margin-left: 5%;
   margin-top: 8%;
-  -webkit-box-shadow: .5px .5px 5px 1px;
-          box-shadow: .5px .5px 5px 1px;
+  margin-bottom: 20%;
+  -webkit-box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
+          box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
 }
 
 .nGroupTop {
@@ -979,14 +1013,16 @@ input, select {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 98%;
+  margin-left: 5px;
 }
 
 .groupInfo {
   background: white;
   width: 94%;
   min-height: 30vh;
-  -webkit-box-shadow: .5px .5px 5px 1px;
-          box-shadow: .5px .5px 5px 1px;
+  -webkit-box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
+          box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
   margin-top: 10px;
 }
 
@@ -1047,18 +1083,6 @@ input, select {
 }
 
 .groupPostsC {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 95%;
-  margin-right: 10%;
   margin-bottom: 100px;
 }
 
@@ -1073,7 +1097,7 @@ input, select {
   background: #49D6EF;
   font-size: 16px;
   margin-bottom: 10px;
-  margin-left: 45%;
+  margin-left: 33%;
 }
 
 .chat {
@@ -1081,8 +1105,8 @@ input, select {
 }
 
 .chatCtnr {
-  -webkit-box-shadow: .5px .5px 5px 1px;
-          box-shadow: .5px .5px 5px 1px;
+  -webkit-box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
+          box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
   margin-top: 20px;
   width: 100%;
   display: -webkit-box;
@@ -1092,11 +1116,24 @@ input, select {
       -ms-flex-pack: center;
           justify-content: center;
   background: white;
+  min-height: 300px;
 }
 
 .chatApp {
   width: 100%;
   margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border: 1px solid #ccc;
+  padding: 5px;
 }
 
 .chatMess {
@@ -1107,7 +1144,7 @@ input, select {
   margin: 10px;
   border: 1px solid black;
   padding: 10px;
-  width: 350px;
+  width: 90%;
 }
 
 @media only screen and (min-width: 760px) {
@@ -1135,8 +1172,8 @@ input, select {
     width: 90vw;
     height: 80vh;
     margin-top: 50px;
-    -webkit-box-shadow: 2px 5px 15px 2px;
-            box-shadow: 2px 5px 15px 2px;
+    -webkit-box-shadow: 2px 5px 15px 2px #aca9a9;
+            box-shadow: 2px 5px 15px 2px #aca9a9;
   }
   .authLogo {
     width: 33%;
@@ -1179,7 +1216,7 @@ input, select {
   .pHdrBtn {
     position: fixed;
     right: 70px;
-    top: 10px;
+    top: 20px;
   }
   .authBtn {
     margin-top: 50px;
@@ -1203,16 +1240,15 @@ input, select {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-shadow: 1px 0px 5px .5px;
-            box-shadow: 1px 0px 5px .5px;
+    -webkit-box-shadow: 1px 0px 5px 0.5px #aca9a9;
+            box-shadow: 1px 0px 5px 0.5px #aca9a9;
     z-index: 2;
   }
   .logoC {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 21%;
-    border-right: 1.5px solid #ccc;
+    width: 15%;
     position: fixed;
     left: 0;
     top: 0;
@@ -1256,7 +1292,7 @@ input, select {
     display: inherit;
     width: 150px;
     height: 100%;
-    border-left: 1.5px solid #ccc;
+    margin-left: 38%;
   }
   .name {
     font-size: 25px;
@@ -1271,8 +1307,8 @@ input, select {
     top: 70px;
     background: #FB5153;
     width: 28%;
-    -webkit-box-shadow: -1px 4px 5px .2px;
-            box-shadow: -1px 4px 5px .2px;
+    -webkit-box-shadow: -1px 4px 5px 0.2px #aca9a9;
+            box-shadow: -1px 4px 5px 0.2px #aca9a9;
   }
   .hdrMenu2 {
     display: none;
@@ -1320,8 +1356,12 @@ input, select {
     padding-bottom: 5px;
     width: 120px;
     border-bottom: 2px solid #ccc;
+    font-size: 18px;
   }
   .mblNav {
+    display: none;
+  }
+  .mblNavOne {
     display: none;
   }
   .navOne {
@@ -1345,6 +1385,10 @@ input, select {
   .navOne h1 {
     border: none;
     padding: 0px;
+    background: none;
+    margin-bottom: 35px;
+    font-size: 18px;
+    text-align: left;
   }
   .navMid {
     margin-left: 15%;
@@ -1355,7 +1399,9 @@ input, select {
   }
   .navMid h1 {
     border: none;
-    padding: 0;
+    padding: 0px;
+    background: none;
+    font-size: 18px;
   }
   .navTwo {
     margin-left: 12%;
@@ -1384,10 +1430,10 @@ input, select {
     border-radius: 50px;
   }
   .dash {
-    width: 21%;
+    width: 15%;
     height: 95vh;
-    -webkit-box-shadow: 1px 0px 5px .5px;
-            box-shadow: 1px 0px 5px .5px;
+    -webkit-box-shadow: 1px 0px 5px 0.5px #aca9a9;
+            box-shadow: 1px 0px 5px 0.5px #aca9a9;
     border-top: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1400,22 +1446,32 @@ input, select {
     top: 70px;
     z-index: 1;
   }
+  .postCtnr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    margin-left: 22%;
+  }
   .postsCtnr {
     min-height: 800px;
     margin-top: 20px;
-    width: 80%;
+    width: 400px;
     background: white;
-    -webkit-box-shadow: .5px .5px 5px 1px;
-            box-shadow: .5px .5px 5px 1px;
+    -webkit-box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
+            box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
     border-top: 10px solid #49D6EF;
-    margin-left: 27%;
+    margin-left: 20px;
   }
   .postsCtnr img {
     margin-left: 5%;
-    width: 90%;
+    width: 350px;
     height: 400px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .cardTitle {
     height: 20px;
@@ -1475,10 +1531,12 @@ input, select {
     font-size: 18px;
   }
   .nPostCntnr {
-    height: 90vh;
+    height: 100%;
   }
   .newPosts {
     margin-left: 25%;
+    margin-top: 5%;
+    height: 600px;
   }
   .nPostTop {
     display: -webkit-box;
@@ -1520,17 +1578,30 @@ input, select {
             flex-direction: column;
   }
   .nPostInput {
-    width: 400px;
+    width: 400%;
     height: 30px;
   }
   .nPostContent {
-    width: 400px;
+    width: 400%;
   }
   .postBtn {
     margin-top: 20px;
   }
+  .post {
+    margin-top: 10px;
+    height: 100%;
+  }
+  .post2 {
+    margin-left: 20%;
+    margin-top: 0px;
+  }
+  .post3 {
+    margin-top: 0px;
+    width: 200%;
+  }
   .deletePost {
     margin-bottom: 50px;
+    margin-left: 150px;
   }
   .addGroup {
     width: 100%;
@@ -1541,9 +1612,9 @@ input, select {
     width: 68%;
     height: 90%;
     margin-left: 25%;
-    margin-top: 3%;
-    -webkit-box-shadow: .5px .5px 5px 1px;
-            box-shadow: .5px .5px 5px 1px;
+    margin-top: 20%;
+    -webkit-box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
+            box-shadow: 0.5px 0.5px 5px 1px #aca9a9;
   }
   .nGroupTop {
     height: 25%;
@@ -1572,20 +1643,21 @@ input, select {
   }
   .groupInfo {
     width: 72%;
-    margin-left: 21%;
+    margin-left: 24%;
   }
   .groupPostsC {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 90%;
+    width: 95%;
+    margin-left: 55%;
     margin-right: 10%;
     margin-bottom: 0px;
     margin-top: 20px;
@@ -1594,9 +1666,13 @@ input, select {
     width: 76%;
     margin-left: 23%;
   }
+  .profilePage {
+    height: 100%;
+  }
   .profileCtnr {
     width: 80%;
     margin-left: 21%;
+    margin-top: 5%;
   }
   .profileTop2 h1 {
     font-size: 20px;
@@ -1609,6 +1685,12 @@ input, select {
   }
   .profileBtm h3 {
     font-size: 18px;
+  }
+  .chat {
+    margin-left: 3%;
+  }
+  .chatBtn {
+    margin-left: 43%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

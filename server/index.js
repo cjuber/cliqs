@@ -10,6 +10,7 @@ const grpCtrl = require('./groupController')
 const postCtrl = require('./postController')
 const userCtrl = require('./userController')
 
+
 const {SESSION_SECRET, CONNECTION_STRING, SERVER_PORT} = process.env
 
 
@@ -20,6 +21,7 @@ const app = express()
 
 
 app.use(express.json())
+app.use(express.static(`${__dirname}/../build`))
 app.use(cors())
 app.use(session ({
     resave: false,
@@ -68,9 +70,6 @@ app.get('/api/group/posts/:id', postCtrl.getGroupPosts)
 //Users
 app.put('/api/profile/:id', userCtrl.updateProfile)
 
-// app.listen(SERVER_PORT, () =>{
-//     console.log(chalk.yellow.bgBlue('Server Running'))
-// })
 
 //Chat 
 
@@ -95,10 +94,10 @@ io.on('connection', socket =>{
         await db.create_message(room, message,userName)
         let messages = await db.get_chat_messages(room )
         io.to(data.room).emit('message dispatched', messages)
-    });
+    })
     socket.on("disconnect", () => {
         console.log("User Disconnected")
-    });
+    })
 })
 
 

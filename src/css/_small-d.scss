@@ -9,7 +9,7 @@
     height: 100vh;
 }
 .authHeader {
-    width: 100%;
+    
     height: 80px;
     background: $headerColor;
     display: flex;
@@ -25,6 +25,7 @@
     flex-direction: column;
     align-items: center;
     background: $secBack;
+    box-shadow: .5px .5px 5px 1px $shadow;
     
 }
 .authInputC{
@@ -71,7 +72,15 @@
     
 }
 
-
+.BG {
+    position: fixed;
+    top: 70px;
+    
+    background: $mainBack;
+    width: 1000px;
+    height: 700px;
+    z-index: -1;
+}
 .header{
     position: fixed;
     top: 0;
@@ -80,7 +89,9 @@
     background: $headerColor;
     
 }
-
+.logoC{
+    width: 100%;
+}
 .logo{
     width: 70px;
     
@@ -93,7 +104,7 @@
     background: $secBack;
     position: fixed;
     top: 65px;
-    box-shadow: .5px 1.5px 5px 1px;
+    box-shadow: .5px 1.5px 5px 1px $shadow;
     display: flex;
     justify-content: space-evenly;
 
@@ -102,7 +113,7 @@
 .findGroups{
     border-right: 1px solid #ccc;
     
-    width:50%;
+    width:45%;
 }
 .link{
     text-decoration: none;
@@ -113,6 +124,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 20%;
 }
 .listGroups{
     background: white;
@@ -121,7 +133,7 @@
     margin-left:5%;
     margin-bottom: 5px;
     margin-top: 5px;
-    box-shadow: .5px 1.5px 5px 1px;
+    box-shadow: .5px 1.5px 5px 1px $shadow;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -167,7 +179,7 @@
 }
 .addGroups{
   
-    width:50%;
+    width:45%;
 }
 .paGroups{
     font-size: 18px;
@@ -242,9 +254,13 @@
  display:flex;
  justify-content: space-between;   
 
+
     h1{
+        font-size: 14px;
         border: 1px solid #ccc;
-        padding: 20px;
+        
+        padding: 21px;
+        background: $headerColor;
     }
 }
 
@@ -261,13 +277,20 @@
     h1{
         border: 1px solid #ccc;
         padding: 20px;
+        background: $headerColor;
         
     }
 }
+.mblNavOne{
+    display: flex;
+    
+}
+
 .navMid{
     h1{
         border: 1px solid #ccc;
         padding: 20px;
+        background: $headerColor;
     }
 }
 .navCtnr3{
@@ -280,6 +303,7 @@
     
     width: 25%;
     text-align: center;
+   
     
 }
 
@@ -305,7 +329,7 @@
     width:90%;
     height: 90%;
     background: white;
-    box-shadow: .5px .5px 5px 1px;
+    box-shadow: .5px .5px 5px 1px $shadow;
 }
 .profilePageImg{
     width: 100px;
@@ -369,13 +393,14 @@
 }
 
 .dash{
-    box-shadow: .5px -1.5px 5px 1px;
+    box-shadow: .5px -1.5px 5px 1px $shadow;
     width: 100%;
     height:8vh;
     position: fixed;
     bottom: 0;
     background:white;
     display: flex;
+    align-content: center;
     
 
 }
@@ -385,11 +410,13 @@
    border-top:none;
     background:$mainBack;
     margin-top: 110px;
-    height:100%;
+    align-items: center;
+    width: 100%;
 }
 .postCtnr{
-    width:90%;
+    
     margin-bottom: 80px;
+    
    
 }
 .postsCtnr{
@@ -398,18 +425,19 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-content: flex-end;
-    width: 100%;
+    width:84%;
     background: $secBack;
-    margin-left: 5%;
-    box-shadow: .5px .5px 5px 1px;
+    margin-left: 8%;
+    box-shadow: .5px .5px 5px 1px $shadow;
     min-height: 275px;
     border-top: 5px solid #49D6EF;
     img{
         
-        width: 100%;
-        height: 170px;
+        width: 95%;
+        max-height: 300px;
         object-fit: contain;
         margin-bottom: 10px;
+        margin-left: 2.5%;
     
     }
 }
@@ -417,7 +445,7 @@
     height: 25px;
     display: flex;
     flex-direction: row;
-    
+    margin-left: 10px;
     align-items: flex-end;
     margin-top: 10px;
     h1{
@@ -435,7 +463,7 @@
     }
 }
 .cardTitle2{
-    margin: 10px 0;
+    margin: 10px 10px;
     display: flex;
     align-items: flex-end;
 
@@ -449,7 +477,7 @@
     }
 }
 .pCard{
-    margin:25px 0;
+    margin:25px 10px;
     display: flex;
     flex-direction: column;
     h4{
@@ -472,8 +500,9 @@
     
     margin:5%;
     width: 90%;
-    height:90%;
-    box-shadow: .5px .5px 5px 1px;    
+    height:500px;
+    margin-bottom: 20%;
+    box-shadow: .5px .5px 5px 1px $shadow;    
     
 }
 .newPosts2{
@@ -544,6 +573,7 @@
     box-sizing: border-box;
     margin: 10px 0;
     font-size: 18px;
+   vertical-align: text-top;
 }
 .postBtn{
     width: 100px;
@@ -587,7 +617,7 @@
     
     margin-top:5px;
     margin-left: 36%;
-    box-shadow: .5px .5px 5px 1px; 
+    box-shadow: .5px .5px 5px 1px $shadow; 
     
 }
 .addGroup{
@@ -598,10 +628,11 @@
 .newGroup{
     background: white;
     width: 90%;
-    height: 90%;
+    height: 500px;
     margin-left: 5%;
     margin-top: 8%;
-    box-shadow: .5px .5px 5px 1px;  
+    margin-bottom: 20%;
+    box-shadow: .5px .5px 5px 1px $shadow;  
 }
 .nGroupTop{
     height: 25%;
@@ -682,12 +713,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 98%;
+    margin-left:5px;
 }
 .groupInfo{
     background: white;
     width: 94%;
     min-height: 30vh;
-    box-shadow: .5px .5px 5px 1px; 
+    box-shadow: .5px .5px 5px 1px $shadow; 
     margin-top: 10px;
 }
 .groupInfoTop{
@@ -728,11 +761,7 @@
     margin: 0 50px;
 }
 .groupPostsC{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 95%;
-    margin-right: 10%;
+   
     margin-bottom: 100px;
 }
 
@@ -747,32 +776,40 @@
     background: $buttonColor;
     font-size: 16px;
     margin-bottom: 10px;
-    margin-left: 45%;
+    margin-left: 33%;
 }
 .chat{
     width: 95%;
     
 }
 .chatCtnr{
-    box-shadow: .5px .5px 5px 1px;
+    box-shadow: .5px .5px 5px 1px $shadow;
     margin-top: 20px;
     width:100%;
     display: flex;
     justify-content: center;
     background: $secBack;
+    min-height: 300px;
+    
 }
 .chatApp{
    width: 100%;  
    margin: 20px;   
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   border: 1px solid #ccc;
+   padding: 5px;
 }
 .chatMess{
     margin: 10px;
+    
 }
 
 .chatInput{
     margin: 10px;
     border: 1px solid black;
     padding: 10px;
-    width: 350px;
+    width: 90%;
 }
 

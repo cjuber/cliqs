@@ -16,15 +16,14 @@ class NavOne extends Component {
                     :
 
                     (<div className='navOne'>
-                    
-                       <Link to='/dashboard' className='link' ><h1 className='dsktpNav'>Home</h1></Link> 
-                       <Link to={pathname} className='link'> <h1 className='dsktpNav'>My Posts</h1></Link>
-                        
-                       <Link to='/dashboard' className='link'><h1 className='mblNav'>Home</h1></Link> 
-                     
-                      
-                       <Link to={pathname} className='link'> <h1 className='mblNav'>My Posts</h1></Link>
-                    
+                    <div className='dsktpNav'>
+                       <Link to='/dashboard' className='link' ><h1>Home</h1></Link> 
+                       <Link to={pathname} className='link'> <h1>My Posts</h1></Link>
+                       </div>
+                        <div className='mblNavOne'>
+                       <Link to='/dashboard' className='link'><h1>Home</h1></Link>                         
+                       <Link to={pathname} className='link'> <h1>My Posts</h1></Link>
+                       </div>
                         
                     </div>)
                 }

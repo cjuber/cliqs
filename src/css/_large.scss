@@ -25,7 +25,7 @@
     width: 90vw;
     height: 80vh;
     margin-top: 50px;
-    box-shadow: 2px 5px 15px 2px;
+    box-shadow: 2px 5px 15px 2px $shadow;
  
 }
 .authLogo{
@@ -63,7 +63,7 @@
 .pHdrBtn {
     position: fixed;
     right: 70px;
-    top: 10px;
+    top: 20px;
 }
 
 .authBtn{
@@ -81,16 +81,13 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    box-shadow: 1px 0px 5px .5px;
+    box-shadow: 1px 0px 5px .5px $shadow;
     z-index: 2;
 }
 
 .logoC{
     display: flex;
-    width:21%;
-    border-right: 1.5px solid #ccc;
-    
-    
+    width:15%;
         position: fixed;
         left: 0;
         top: 0;
@@ -137,7 +134,8 @@
     display: inherit;
     width: 150px;
     height: 100%;
-    border-left: 1.5px solid #ccc;
+    margin-left: 38%;
+    
 }
 .name{
     font-size: 25px;
@@ -154,7 +152,7 @@
     top: 70px;
     background: $headerColor;
     width:28%;
-    box-shadow: -1px 4px 5px .2px;
+    box-shadow: -1px 4px 5px .2px $shadow;
     
     
     
@@ -191,16 +189,23 @@
    flex-direction: column;
    height: 100%;
    
+   
    h2{
        margin-left: 10px;
-       padding-bottom: 5px;;
+       padding-bottom: 5px;
        width:120px;
-       border-bottom: 2px solid #ccc
+       border-bottom: 2px solid #ccc;
+       font-size: 18px;
+       
    }
    
 }
 .mblNav{
     display:none;
+}
+.mblNavOne{
+    display: none;
+    
 }
 .navOne {
     width: 100%;
@@ -217,6 +222,10 @@
    h1{
        border: none;
        padding: 0px;
+       background: none;
+       margin-bottom: 35px;
+       font-size: 18px;
+       text-align: left;
    }
 }
 .navMid{
@@ -228,8 +237,9 @@
     
     h1{
         border: none;
-       padding: 0;
-       
+       padding: 0px;
+       background: none;
+       font-size: 18px;
     }
 }
 .navTwo {
@@ -253,9 +263,9 @@
     }
 }
 .dash{
-    width: 21%;
+    width: 15%;
     height:95vh;
-    box-shadow: 1px 0px 5px .5px;
+    box-shadow: 1px 0px 5px .5px $shadow;
     border-top: none;
    
     display: flex;
@@ -265,23 +275,28 @@
     z-index: 1;
 
 }
+.postCtnr{
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: 22%;
+}
 
 .postsCtnr{
     
     min-height: 800px;
    
     margin-top: 20px;
-    width: 80%;
+    width: 400px;
     background: $secBack;
    
-    box-shadow: .5px .5px 5px 1px;
+    box-shadow: .5px .5px 5px 1px $shadow;
     border-top: 10px solid #49D6EF;
-    margin-left: 27%;
+    margin-left: 20px;
     img{
         margin-left: 5%;
-        width: 90%;
+        width: 350px;
         height: 400px;
-        object-fit: cover;
+        object-fit: contain;
     }
 }
 .cardTitle{
@@ -340,14 +355,18 @@
     }
 }
 .nPostCntnr{
-    height: 90vh;
+    height: 100%;
 }
 .newPosts{
     margin-left: 25%;
+    margin-top: 5%;
+    height: 600px;
+    
 }
 .nPostTop{
     display: flex;
     margin-left: 25%;
+    
     h1{
         margin-top: 25px;
         margin-left: 20px;
@@ -375,17 +394,30 @@
     flex-direction: column;
 }
 .nPostInput{
-    width: 400px;
+    width: 400%;
     height: 30px;    
 }
 .nPostContent{
-    width: 400px;
+    width: 400%;
 }
 .postBtn{
     margin-top: 20px;
 }
+.post{
+    margin-top: 10px;
+    height: 100%;
+}
+.post2{
+    margin-left: 20%;
+    margin-top: 0px;
+}
+.post3{
+    margin-top: 0px;
+    width:200%;
+}
 .deletePost{
     margin-bottom: 50px;
+    margin-left: 150px;
 }
 .addGroup{
     width: 100%;
@@ -397,8 +429,8 @@
     width: 68%;
     height: 90%;
     margin-left: 25%;
-    margin-top: 3%;
-    box-shadow: .5px .5px 5px 1px;  
+    margin-top: 20%;
+    box-shadow: .5px .5px 5px 1px $shadow;  
 }
 .nGroupTop{
     height: 25%;
@@ -426,14 +458,17 @@
 }
 .groupInfo{
     width: 72%;
-    margin-left: 21%;
+    margin-left: 24%;
 }
 .groupPostsC{
     
     display: flex;
-    flex-direction: column;
+    
+    
+    flex-flow: row wrap;
     align-items: center;
-    width: 90%;
+    width: 95%;
+    margin-left: 55%;
     margin-right: 10%;
     margin-bottom: 0px;
     margin-top: 20px;
@@ -444,9 +479,15 @@
    margin-left: 23%;
     
 }
+.profilePage{
+    
+    height: 100%;
+    
+}
 .profileCtnr{
     width: 80%;
     margin-left: 21%;
+    margin-top: 5%;
 }
 .profileTop2{
     h1{
@@ -464,3 +505,9 @@
         font-size: 18px;
     }
 }
+.chat{margin-left: 3%;}
+.chatBtn{
+    
+    margin-left: 43%;
+}
+
